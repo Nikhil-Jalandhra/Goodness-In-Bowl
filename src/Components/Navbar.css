@@ -1,0 +1,62 @@
+.navContainer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    color: white;
+    align-items: center;
+    background-color: rgb(40, 40, 40);
+    /* border-bottom: 1px solid white; */
+}
+
+.navLogoContainer {
+    width: 50%;
+}
+
+.logoContainer{
+    display: flex;
+    align-items: end;
+    margin-left: 100px;
+}
+
+.logoContainer h1 {
+    font-family: classic2;
+    font-size: 30px; 
+}
+
+.logoContainer span {
+    font-size: 25px; 
+    margin-left: 5px;
+}
+
+.navLinkContainer {
+    width: 50%;
+}
+
+.navLinkBox {
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+    font-size: 19px;
+    font-weight: 300;
+    font-family: "classic1";
+    /* background-color: cadetblue; */
+    margin-right: 100px;
+}
+
+.navLinkBox a {
+    text-decoration: none;
+}
+
+.navLinkBox li {
+    color: white;
+    padding-left: 25px;
+}
+
+.navSeperateLine {
+    width: calc(100% - 100px);
+    height: 1px;
+    margin: 0 auto;
+    background-color: rgb(90, 90, 90);
+}
