@@ -1,0 +1,79 @@
+.navContainer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    color: var(--fontColor);
+    align-items: center;
+    background-color:var(--baseColor);
+    /* border-bottom: 1px solid white; */
+}
+
+.navLogoContainer {
+    width: 50%;
+}
+
+.navLogoContainer a {
+    text-decoration: none;
+    color: var(--fontColor);
+}
+
+.logoContainer{
+    width: 80px;
+    display: flex;
+    align-items: end;
+    margin-left: 100px;
+}
+
+.logoContainer h1 {
+    font-family: classic2;
+    font-size: 30px; 
+}
+
+.logoContainer span {
+    font-size: 25px; 
+    margin-left: 5px;
+}
+
+.navLinkContainer {
+    width: 50%;
+}
+
+.navLinkBox {
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+    font-size: 19px;
+    font-weight: 300;
+    font-family: "classic1";
+    /* background-color: cadetblue; */
+    margin-right: 100px;
+}
+
+.navLinkBox a {
+    text-decoration: none;
+}
+
+.navLinkBox li {
+    font-weight: 400;
+    color: var(--fontColor);
+    padding-left: 35px;
+    transition: font-weight 0.2s linear, transform 0.2s linear;
+}
+
+.navLinkBox li:hover {
+    font-weight: 900;
+    transform: scale(1.1);
+}
+
+.navRoot {
+    background-color: var(--baseColor);
+}
+
+.navSeperateLine {
+    width: calc(100% - 100px);
+    height: 1px;
+    margin: 0 auto;
+    background-color: var(--fontColor);
+}
