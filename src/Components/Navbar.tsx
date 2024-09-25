@@ -12,13 +12,15 @@ function Navbar() {
     ]
 
   return (
-    <div>
+    <div className="navRoot">
       <div className="navContainer">
         <div className="navLogoContainer">
+          <Link to="/">
             <div className="logoContainer">
                 <h1>GIB</h1>
                 <span><GiBowlOfRice /></span>
             </div>
+          </Link>
         </div>
         <div className="navLinkContainer">
             <div className="navLinkBox">
