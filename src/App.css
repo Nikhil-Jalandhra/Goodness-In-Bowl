@@ -1,7 +1,15 @@
+:root {
+    --fontColor: #76520e; 
+}
+
+:root {
+    --baseColor: #ffe169; 
+}
+
 *{
     margin: 0;
     outline: 0;
     box-sizing: border-box;
     user-select: none;
-    background-color: rgb(40, 40, 40);
+    /* background-color: var(--baseColor); */
 }
