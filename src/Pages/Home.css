@@ -1,0 +1,5 @@
+.homeContainer {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: rgb(40, 40, 40);
+}
