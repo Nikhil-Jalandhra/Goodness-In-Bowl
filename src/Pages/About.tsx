@@ -11,9 +11,18 @@ function About() {
         <AboutParagraph/>
         <div className="aboutImageSection">
             <div className="aboutImageContainer">
-              <div className="oneAboutImage"><img src={about1} alt="Dish" /></div>
-              <div className="twoAboutImage"><img src={about2} alt="Farm" /></div>
-              <div className="threeAboutImage"><img src={about3} alt="Cooking" /></div>
+              <div className="oneAboutImage">
+                  <div className="oneAboutImageCover">LOVE 💝</div>
+                  <img src={about1} alt="Dish" />
+              </div>
+              <div className="twoAboutImage">
+                  <div className="twoAboutImageCover">FRESH 🌾</div>
+                  <img src={about2} alt="Farm" />
+              </div>
+              <div className="threeAboutImage">
+                    <div className="threeAboutImageCover">CLEAN 🫧</div>
+                    <img src={about3} alt="Cooking" />
+              </div>
             </div>
         </div>
         <div className="aboutTextSection">
