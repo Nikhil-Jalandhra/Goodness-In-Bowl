@@ -6,18 +6,14 @@ function Home() {
   return (
     <div>
       <div className="homeContainer">
-        <div className="homeTextContainer">
           <div className="homeTextManager">
             <h1>Wholesome Recipes <br /> for Every Occasion</h1>
             <p>Goodness In Bowl, to Warm Your Soul</p>
-            <img src={mainText} alt="" />
+            <img src={mainText} alt="logo" />
           </div>
-        </div>
-        <div className="homeImageContainer">
           <div className="homeBowlContainer">
             <img src={homeBowl} alt="" />
           </div>
-        </div>
       </div>
     </div>
   );
