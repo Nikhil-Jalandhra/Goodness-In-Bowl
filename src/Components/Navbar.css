@@ -11,6 +11,7 @@
 }
 
 .navLogoContainer {
+    height: 79px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -35,10 +36,6 @@
 .logoContainer span {
     font-size: 25px; 
     margin-left: 5px;
-}
-
-.navLinkContainer {
-    background-color: aquamarine;
 }
 
 .navLinkBox {
