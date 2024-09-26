@@ -1,0 +1,66 @@
+.aboutContainer {
+    width: 100%;
+    background-color: var(--baseColor);
+    text-align: center;
+    color: var(--fontColor);
+    font-family: "classic1";
+    font-size: 22px;
+}
+
+.aboutImageSection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutImageContainer {
+    width: 55%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.aboutImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+.aboutImageContainer img:hover {
+    transform: scale(1);
+}
+
+.oneAboutImage {
+    grid-column: 2 / 10;
+    grid-row: 1 / 3;
+    overflow: hidden;
+}
+
+.twoAboutImage {
+    grid-column: 10 / 16;
+    grid-row: 1 / 2;
+    overflow: hidden;
+}
+
+.threeAboutImage {
+    grid-column: 10 / 15;
+    grid-row: 2 / 3;
+    overflow: hidden;
+}
+
+.aboutTextSection {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutTextContainer {
+    width: 65%;
+}
