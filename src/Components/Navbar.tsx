@@ -12,7 +12,6 @@ function Navbar() {
     ]
 
   return (
-    <div className="navRoot">
       <div className="navContainer">
         <div className="navLogoContainer">
           <Link to="/">
@@ -22,7 +21,6 @@ function Navbar() {
             </div>
           </Link>
         </div>
-        <div className="navLinkContainer">
             <div className="navLinkBox">
                 {navLink.map((item) => (
                     <Link to={item.link} key={item.key}>
@@ -30,10 +28,8 @@ function Navbar() {
                     </Link>
                 ))}
             </div>
-        </div>
+        <div className="navSeperateLine"></div>
       </div>
-      <div className="navSeperateLine"></div>
-    </div>
   );
 }
 
