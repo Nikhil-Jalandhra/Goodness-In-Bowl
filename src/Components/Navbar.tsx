@@ -1,6 +1,6 @@
-import "./NavBar.css"
-import { GiBowlOfRice } from "react-icons/gi";
+import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { GiBowlOfRice } from "react-icons/gi";
 
 function Navbar() {
 
@@ -8,8 +8,8 @@ function Navbar() {
         { name: 'Home', link: '/', key: "Home" },
         { name: 'About', link: '/about', key: "About Us" },
         { name: 'Blog', link: '/blog', key: "Blog" },
-        { name: 'Order', link: '/Order', key: "Order Now" },
-    ]
+        { name: 'Recipe', link: '/recipe', key: "Recipe" },
+    ];
 
   return (
       <div className="navContainer">
