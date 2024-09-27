@@ -16,13 +16,15 @@
 
 .aboutParagraphContentP {
     text-transform: uppercase;
-    letter-spacing: 6px;
-    margin-bottom: 10px;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    /* margin-bottom: 10px; */
 }
 
 .aboutParagraphContent h1 {
     font-size: 60px;
-    line-height: 55px;
+    line-height: 80px;
 }
 
 .aboutParagraphContainer span {
