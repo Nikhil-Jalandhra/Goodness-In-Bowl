@@ -8,7 +8,7 @@ function Navbar() {
         { name: 'Home', link: '/', key: "Home" },
         { name: 'About', link: '/about', key: "About Us" },
         { name: 'Blog', link: '/blog', key: "Blog" },
-        { name: 'Recipe', link: '/recipe', key: "Recipe" },
+        { name: 'Recipes', link: '/recipes', key: "Recipes" },
     ];
 
   return (
