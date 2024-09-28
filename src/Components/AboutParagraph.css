@@ -25,6 +25,7 @@
 .aboutParagraphContent h1 {
     font-size: 60px;
     line-height: 80px;
+    animation: bouncy 15s infinite linear;
 }
 
 .aboutParagraphContainer span {
@@ -39,6 +40,18 @@
 
 .aboutParagraphContentP2 a {
     text-decoration: none;
+}
+
+@keyframes bouncy {
+    0% {
+        font-weight: 900;
+    }
+    50% {
+        font-weight: 100;
+    }
+    100% {
+        font-weight: 900;
+    }
 }
 
 .aboutParagraphContentP2 span {
