@@ -6,7 +6,7 @@ function Navbar() {
 
     const navLink = [
         { name: 'Home', link: '/', key: "Home" },
-        { name: 'About', link: '/about', key: "About Us" },
+        { name: 'About', link: '/about', key: "About" },
         { name: 'Blog', link: '/blog', key: "Blog" },
         { name: 'Recipes', link: '/recipes', key: "Recipes" },
     ];
