@@ -6,9 +6,9 @@ function Footer() {
 
   const navLink = [
     { name: 'Home', link: '/', key: "Home" },
-    { name: 'About', link: '/about', key: "About Us" },
-    { name: 'Blog', link: '/blog', key: "Blog" },
-    { name: 'Order', link: '/Order', key: "Order Now" },
+        { name: 'About', link: '/about', key: "About" },
+        { name: 'Blog', link: '/blog', key: "Blog" },
+        { name: 'Recipes', link: '/recipes', key: "Recipes" },
   ]
 
   return (
