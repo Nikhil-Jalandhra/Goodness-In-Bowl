@@ -1,0 +1,215 @@
+import recipe1 from "../../public/Images/recipe1.jpg";
+import recipe2 from "../../public/Images/recipe2.jpg";
+import recipe3 from "../../public/Images/recipe3.jpg";
+import recipe4 from "../../public/Images/recipe4.jpg";
+import recipe5 from "../../public/Images/recipe5.jpg";
+
+const allRecipies = [
+    
+    {
+        id: 1,
+        name: "Poha",
+        about: "Poha is a beloved Indian breakfast dish made from flattened rice, which is light yet filling. It's typically cooked with onions, diced potatoes, and green chilies, seasoned with mustard seeds and turmeric. The dish is garnished with fresh cilantro and served with lemon wedges for a burst of flavor, making it a perfect way to start your day.",
+        ingredients: [
+            "2 cups poha (flattened rice)",
+            "1 large onion, chopped",
+            "1 medium potato, diced",
+            "2 green chilies, chopped",
+            "1 teaspoon mustard seeds",
+            "1/2 teaspoon turmeric powder",
+            "2 tablespoons oil",
+            "Salt to taste",
+            "Fresh cilantro for garnish",
+            "Lemon wedges for serving"
+        ],
+        recipeVideoLink: "https://www.youtube.com/watch?v=example",
+        recipeHeroImage: recipe1,
+        recipeHeroImage2: "",
+        servings: 4,
+        prepTime: "10 min",
+        cookTime: "15 min",
+        category: "Breakfast",
+        nutrients: [
+            "Calories: 440",
+            "Protein: 8g",
+            "Carbohydrates: 90g",
+            "Dietary Fiber: 4g",
+            "Sugars: 2g",
+            "Fat: 10g",
+            "Saturated Fat: 2g",
+            "Cholesterol: 0mg",
+            "Sodium: 600mg",
+            "Vitamin A: 12% of Daily Value",
+            "Vitamin C: 20% of Daily Value",
+            "Iron: 20% of Daily Value",
+            "Calcium: 4% of Daily Value"
+        ]
+    },
+    {
+        id: 2,
+        name: "Chole Bhature",
+        about: "Chole Bhature is a classic North Indian dish that brings together the rich flavors of spiced chickpeas (chole) served alongside fluffy, deep-fried bread (bhature). This hearty meal is perfect for lunch or dinner and is often accompanied by pickles and yogurt, making it a complete and satisfying experience for your taste buds.",
+        ingredients: [
+            "1 cup chickpeas",
+            "1 large onion, chopped",
+            "1 large tomato, chopped",
+            "1 tablespoon ginger-garlic paste",
+            "1 small green chili, chopped",
+            "1 teaspoon cumin seeds",
+            "1 teaspoon coriander powder",
+            "1 teaspoon cumin powder",
+            "1 teaspoon garam masala",
+            "2 tablespoons oil",
+            "Salt to taste",
+            "Bhature dough (2 cups)"
+        ],
+        recipeVideoLink: "https://www.youtube.com/watch?v=example",
+        recipeHeroImage: recipe2,
+        recipeHeroImage2: "",
+        servings: 4,
+        prepTime: "30 min",
+        cookTime: "45 min",
+        category: "Lunch",
+        nutrients: [
+            "Calories: 600",
+            "Protein: 18g",
+            "Carbohydrates: 90g",
+            "Dietary Fiber: 12g",
+            "Sugars: 6g",
+            "Fat: 20g",
+            "Saturated Fat: 3g",
+            "Cholesterol: 0mg",
+            "Sodium: 800mg",
+            "Vitamin A: 10% of Daily Value",
+            "Vitamin C: 15% of Daily Value",
+            "Iron: 25% of Daily Value",
+            "Calcium: 6% of Daily Value"
+        ]
+    },
+    {
+        id: 3,
+        name: "Chow Mein",
+        about: "Chow Mein is a popular Chinese stir-fried noodle dish that combines a medley of colorful vegetables with tender meat or tofu. The noodles are tossed in a savory sauce that adds depth to the dish. It's quick to prepare, making it a favorite for busy weeknights, and can easily be customized with your favorite proteins and vegetables.",
+        ingredients: [
+            "200 grams chow mein noodles",
+            "1 cup mixed vegetables (carrots, bell peppers, beans)",
+            "100 grams chicken or tofu, sliced",
+            "2 tablespoons soy sauce",
+            "1 tablespoon oyster sauce (optional)",
+            "1 teaspoon sesame oil",
+            "2 cloves garlic, minced",
+            "1 tablespoon ginger, minced",
+            "2 tablespoons oil",
+            "Salt and pepper to taste",
+            "Green onions for garnish"
+        ],
+        recipeVideoLink: "https://www.youtube.com/watch?v=example",
+        recipeHeroImage: recipe3,
+        recipeHeroImage2: "",
+        servings: 4,
+        prepTime: "15 min",
+        cookTime: "20 min",
+        category: "Dinner",
+        nutrients: [
+            "Calories: 550",
+            "Protein: 20g",
+            "Carbohydrates: 75g",
+            "Dietary Fiber: 6g",
+            "Sugars: 3g",
+            "Fat: 20g",
+            "Saturated Fat: 4g",
+            "Cholesterol: 40mg",
+            "Sodium: 900mg",
+            "Vitamin A: 15% of Daily Value",
+            "Vitamin C: 25% of Daily Value",
+            "Iron: 15% of Daily Value",
+            "Calcium: 4% of Daily Value"
+        ]
+    },
+    {
+        id: 4,
+        name: "Vegetable Biryani",
+        about: "Vegetable Biryani is a fragrant and colorful rice dish that features a variety of mixed vegetables simmered with basmati rice and aromatic spices. This dish is not only visually appealing but also rich in flavors. It's a one-pot meal that's perfect for family gatherings or special occasions, often served with raita or salad.",
+        ingredients: [
+            "2 cups basmati rice",
+            "1 cup mixed vegetables (carrots, peas, beans, and potatoes)",
+            "1 large onion, thinly sliced",
+            "2 tomatoes, chopped",
+            "1 tablespoon ginger-garlic paste",
+            "1/2 cup yogurt",
+            "2 green chilies, slit",
+            "1 teaspoon cumin seeds",
+            "1 teaspoon coriander powder",
+            "1 teaspoon garam masala",
+            "1/4 teaspoon saffron strands (optional)",
+            "4 cups water",
+            "2 tablespoons oil or ghee",
+            "Salt to taste",
+            "Fresh cilantro and mint for garnish"
+        ],
+        recipeVideoLink: "https://www.youtube.com/watch?v=example",
+        recipeHeroImage: recipe4,
+        recipeHeroImage2: "",
+        servings: 4,
+        prepTime: "30 min",
+        cookTime: "1 hour",
+        category: "Dinner",
+        nutrients: [
+            "Calories: 450",
+            "Protein: 12g",
+            "Carbohydrates: 90g",
+            "Dietary Fiber: 5g",
+            "Sugars: 4g",
+            "Fat: 10g",
+            "Saturated Fat: 2g",
+            "Cholesterol: 5mg",
+            "Sodium: 500mg",
+            "Vitamin A: 20% of Daily Value",
+            "Vitamin C: 30% of Daily Value",
+            "Iron: 15% of Daily Value",
+            "Calcium: 8% of Daily Value"
+        ]
+    },
+    {
+        id: 5,
+        name: "Samosa",
+        about: "Samosa is a delightful Indian snack that features a crispy pastry shell filled with a savory mixture of spiced potatoes and peas. These triangle-shaped treats are deep-fried to golden perfection and are often served with chutneys. They're perfect as appetizers for parties or as a satisfying snack at any time of the day.",
+        ingredients: [
+            "2 cups all-purpose flour",
+            "4 medium potatoes, boiled and mashed",
+            "1 cup green peas, boiled",
+            "1 teaspoon cumin seeds",
+            "1 teaspoon coriander powder",
+            "1 teaspoon garam masala",
+            "2 green chilies, finely chopped",
+            "2 tablespoons oil",
+            "Salt to taste",
+            "Water (as needed)",
+            "Oil for deep frying"
+        ],
+        recipeVideoLink: "https://www.youtube.com/watch?v=example",
+        recipeHeroImage: recipe5,
+        recipeHeroImage2: "",
+        servings: 4,
+        prepTime: "20 min",
+        cookTime: "30 min",
+        category: "Lunch",
+        nutrients: [
+            "Calories: 500",
+            "Protein: 10g",
+            "Carbohydrates: 70g",
+            "Dietary Fiber: 5g",
+            "Sugars: 2g",
+            "Fat: 25g",
+            "Saturated Fat: 5g",
+            "Cholesterol: 0mg",
+            "Sodium: 600mg",
+            "Vitamin A: 5% of Daily Value",
+            "Vitamin C: 10% of Daily Value",
+            "Iron: 10% of Daily Value",
+            "Calcium: 2% of Daily Value"
+        ]
+    }
+];
+
+export default allRecipies;
