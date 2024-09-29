@@ -5,7 +5,24 @@ import { PiCookingPotFill } from "react-icons/pi";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-function RecipeCard({item}) {
+interface recipeCardData {
+  item: {
+      id: number,
+      name: string,
+      about: string,
+      ingredients: string[],
+      recipeVideoLink: string,
+      recipeHeroImage: string,
+      recipeHeroImage2: string,
+      servings: number,
+      prepTime: string,
+      cookTime: string,
+      category: string,
+      nutrients: string[]
+  }
+}
+
+function RecipeCard({item}: recipeCardData) {
     
   return (
     <div>
