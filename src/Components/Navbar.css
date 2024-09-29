@@ -1,17 +1,20 @@
 .navContainer {
     width: 100%;
     height: 80px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     font-size: 21px;
     color: var(--fontColor);
-    align-items: center;
     background-color:var(--baseColor);
-    /* border-bottom: 1px solid white; */
+    padding: 0 70px;
 }
 
 .navLogoContainer {
-    width: 50%;
+    height: 79px;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .navLogoContainer a {
@@ -20,10 +23,9 @@
 }
 
 .logoContainer{
-    width: 80px;
+    width: 100px;
     display: flex;
     align-items: end;
-    margin-left: 100px;
 }
 
 .logoContainer h1 {
@@ -36,19 +38,14 @@
     margin-left: 5px;
 }
 
-.navLinkContainer {
-    width: 50%;
-}
-
 .navLinkBox {
     display: flex;
+    align-items: center;
     justify-content: end;
     list-style-type: none;
     font-size: 19px;
     font-weight: 300;
     font-family: "classic1";
-    /* background-color: cadetblue; */
-    margin-right: 100px;
 }
 
 .navLinkBox a {
@@ -67,13 +64,10 @@
     transform: scale(1.1);
 }
 
-.navRoot {
-    background-color: var(--baseColor);
-}
-
 .navSeperateLine {
-    width: calc(100% - 100px);
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    width: 100%;
     height: 1px;
-    margin: 0 auto;
     background-color: var(--fontColor);
 }

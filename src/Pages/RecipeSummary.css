@@ -1,0 +1,113 @@
+.recipeSummaryContainer{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: var(--baseColor);
+    color: var(--fontColor);
+    display: flex;
+    justify-content: center;
+}
+
+.recipeSummaryContent {
+    width: 70%;
+    height: 100%;
+    padding: 10px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipeSummaryImageAboutContainer {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    overflow: hidden;
+    margin-bottom: 30px;
+    gap: 50px;
+    padding: 20px;
+}
+
+.recipeSummaryImageAboutContainer img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.879);
+}
+
+.recipeName {
+    font-family: "classic2";
+    font-size: 70px;
+    color: var(--fontColor);
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.recipeAboutDetailHeading {
+    font-family: "classic2";
+    font-size: 40px;
+    color: var(--baseColor);
+    background-color: var(--fontColor);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipeSummaryAboutContainer p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.recipeOfficialDetails {
+    text-align: left;
+}
+
+.recipeNutIng {
+    font-family: "classic2";
+    margin-bottom: 10px;
+}
+
+.recipeOfficialDetails ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.recipeButtons {
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+}
+
+.recipeButtons p {
+    min-width: 100px;
+    padding: 8px 8px;
+    border: 1px solid var(--fontColor);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.recipeVideoAbout {
+    width: 90%;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid var(--fontColor);
+}
+
+.recipeVideoAbout p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.recipeVideoAbout a {
+    text-decoration: none;
+    font-family: "classic2";
+    font-weight: 900;
+    font-size: 25px;
+    color: red;
+}
