@@ -1,8 +1,8 @@
-import recipe1 from "../../public/Images/recipe1.jpg";
-import recipe2 from "../../public/Images/recipe2.jpg";
-import recipe3 from "../../public/Images/recipe3.jpg";
-import recipe4 from "../../public/Images/recipe4.jpg";
-import recipe5 from "../../public/Images/recipe5.jpg";
+import recipe1 from "/Images/recipe1.jpg";
+import recipe2 from "/Images/recipe2.jpg";
+import recipe3 from "/Images/recipe3.jpg";
+import recipe4 from "/Images/recipe4.jpg";
+import recipe5 from "/Images/recipe5.jpg";
 
 const allRecipies = [
     
