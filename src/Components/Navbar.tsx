@@ -1,4 +1,4 @@
-import "./NavBar.css";
+import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { GiBowlOfRice } from "react-icons/gi";
 
