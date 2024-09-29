@@ -3,12 +3,14 @@ import { RxLapTimer } from "react-icons/rx";
 import { IoPersonSharp } from "react-icons/io5";
 import { PiCookingPotFill } from "react-icons/pi";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function RecipeCard({item}) {
     
   return (
     <div>
         <div className="recipeCard">
+          <Link to={`/recipeSummary/${item.id}/${item.name}`}>
             <div className="recipeImageContainer">
                 <div className="recipeCategory">{item.category}</div>
                 <div className="recipePreview">View Recipe <MdOutlineArrowOutward /></div>
@@ -20,6 +22,7 @@ function RecipeCard({item}) {
                 <div className="recipeDetail"><PiCookingPotFill />&nbsp;{item.cookTime} cook</div>
             </div>
             <h1>{item.name}</h1>
+          </Link>
         </div>
     </div>
   );

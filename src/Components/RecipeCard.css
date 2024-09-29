@@ -5,6 +5,11 @@
     border-radius: 10px;
 }
 
+.recipeCard a {
+    text-decoration: none;
+    color: var(--Color);
+}
+
 .recipeImageContainer {
     width: 100%;
     height: 85%;
