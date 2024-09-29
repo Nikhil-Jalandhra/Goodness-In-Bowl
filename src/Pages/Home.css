@@ -79,3 +79,119 @@
 .homeBowlContainer img:hover {
     animation-play-state: paused;   
 }
+
+.homeBlogDisplay {
+    width: 100%;
+    color: var(--fontColor);
+    background-color: var(--baseColor);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeBlogHeading {
+    font-family: "classic2";
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.homeBlogCardDisplay {
+    width: 80%;
+    display: grid;
+    margin: 50px 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 40px;
+}
+
+
+.homeRecipeDisplay {
+    width: 100%;
+    color: var(--fontColor);
+    background-color: var(--baseColor);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeRecipeHeading {
+    font-family: "classic2";
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.homeRecipeCardDisplay {
+    width: 80%;
+    display: grid;
+    margin: 50px 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 40px;
+}
+
+.homeImageGrid {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--baseColor);
+    padding-top: 20px;
+}
+
+.homeImageGridHeading {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--fontColor);
+    color: var(--fontColor);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.socialIcon {
+    display: flex;
+}
+
+.socialIcon p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin: 10px 20px 0 0;
+}
+
+.homeImageGridContainer {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 25px;
+}
+
+.homeImageGridContainer img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.home1 {
+    height: 360px;
+    grid-column: 1 / 4;
+}
+
+.home2 {
+    height: 290px;
+    grid-column: 4 / 7;
+}
+.home3 {
+    height: 410px;
+    grid-column: 7 / 10;
+}
+.home4 {
+    height: 260px;
+    grid-column: 10 / 13;
+}
