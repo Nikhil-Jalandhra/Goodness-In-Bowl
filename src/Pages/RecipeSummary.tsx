@@ -10,7 +10,6 @@ import allRecipies from "../database/recipes";
 function RecipeSummary() {
 
     const { id } = useParams();
-
     const  recipeSummaryData = allRecipies.find(item => (item.id === Number(id)));
     
 
