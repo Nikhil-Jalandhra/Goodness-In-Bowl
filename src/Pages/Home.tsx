@@ -1,5 +1,14 @@
 import "./Home.css";
-import homeBowl from "/Images/homeBowl.png";
+import homeBowl1 from "/Images/homeBowl1.png";
+import homeBowl2 from "/Images/homeBowl2.png";
+import homeBowl3 from "/Images/homeBowl3.png";
+import homeBowl4 from "/Images/homeBowl4.png";
+import homeBowl5 from "/Images/homeBowl5.png";
+import homeBowl6 from "/Images/homeBowl6.png";
+import homeBowl7 from "/Images/homeBowl7.png";
+import homeBowl8 from "/Images/homeBowl8.png";
+import homeBowl9 from "/Images/homeBowl9.png";
+import homeBowl10 from "/Images/homeBowl10.png";
 import mainText from "/Images/mainText.png";
 import allBlogs from "../database/blog";
 import AboutParagraph from "../Components/AboutParagraph";
@@ -13,8 +22,40 @@ import home4 from "/Images/home4.jpg";
 import { SiInstagram } from "react-icons/si";
 import { FaFacebookSquare } from "react-icons/fa";
 import { TfiYoutube } from "react-icons/tfi";
+import { useState, useEffect, useCallback, useMemo } from "react";
 
 function Home() {
+
+    const allBowl = useMemo(() => [
+      homeBowl1,
+      homeBowl2,
+      homeBowl3,
+      homeBowl4,
+      homeBowl5,
+      homeBowl6,
+      homeBowl7,
+      homeBowl8,
+      homeBowl9,
+      homeBowl10,
+    ], []); // this is a expensve task of cpu there for I use Use memo Hook that why it is only initialize once
+  
+    // Wrap getRandomBowlImage in useCallback to stabilize its reference
+    const getRandomBowlImage = useCallback(() => {
+      return allBowl[Math.floor(Math.random() * allBowl.length)];
+    }, [allBowl]); // only when allBowl array will update
+  
+    const [homeBowlImage, setHomeBowlImage] = useState(getRandomBowlImage());
+  
+    useEffect(() => {
+      console.log("hello");
+      const intervalId = setInterval(() => {
+        setHomeBowlImage(getRandomBowlImage());
+      }, 3000);
+
+      
+      return () => clearInterval(intervalId);
+    }, [getRandomBowlImage]); // Now it's stable
+
   return (
     <div>
       <div className="homeContainer">
@@ -24,10 +65,12 @@ function Home() {
             <img src={mainText} alt="Goodness In Bowl" />
           </div>
           <div className="homeBowlContainer">
-            <img src={homeBowl} alt={homeBowl} />
+          <img src={homeBowlImage} alt="Bowl" />
           </div>
       </div>
+      
           <AboutParagraph/>
+
           <div className="homeBlogDisplay">
             <h1 className="homeBlogHeading">Our Blogs</h1>
             <div className="homeBlogCardDisplay">
@@ -36,6 +79,7 @@ function Home() {
               ))}
             </div>
           </div>
+
           <div className="homeRecipeDisplay">
             <h1 className="homeRecipeHeading">Our Recipes</h1>
             <div className="homeRecipeCardDisplay">
