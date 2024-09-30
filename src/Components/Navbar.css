@@ -64,6 +64,11 @@
     transform: scale(1.1);
 }
 
+.activeNavLink li {
+    font-weight: 900;
+    transform: scale(1.1);
+}
+
 .navSeperateLine {
     grid-column: 1 / span 2;
     grid-row: 2;
