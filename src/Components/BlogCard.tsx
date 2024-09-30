@@ -23,7 +23,7 @@ function BlogCard({item}: blogCardData) {
   return (
     <div>
        <div className="blogCard">
-          <Link to={`/blogSummary/${item.id}/${item.title1}`}>
+          <Link to={`/blog/${item.id}/${item.title1}`}>
             <div className="blogImageContainer">
                 <div className="blogCategory">{item.date}</div>
                 <div className="blogPreview">By {item.author}. <MdOutlineArrowOutward /></div>

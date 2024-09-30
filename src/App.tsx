@@ -19,9 +19,9 @@ function App() {
         <Route element={<Home/>} path='/'/>
         <Route element={<About/>} path='/about'/>
         <Route element={<Blog/>} path='/blog'/>
-        <Route element={<BlogSummary/>} path='/blogSummary/:id/:title'/>
-        <Route element={<Recipes/>} path='/Recipes'/>
-        <Route element={<RecipeSummary/>} path='/recipeSummary/:id/:title'/>
+        <Route element={<BlogSummary/>} path='/blog/:id/:title'/>
+        <Route element={<Recipes/>} path='/recipes'/>
+        <Route element={<RecipeSummary/>} path='/recipes/:id/:title'/>
       </Routes>
       <Footer/>
     </Router>

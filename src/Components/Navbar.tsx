@@ -1,18 +1,18 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { GiBowlOfRice } from "react-icons/gi";
 
 function Navbar() {
 
     const navLink = [
-        { name: 'Home', link: '/', key: "Home" },
-        { name: 'About', link: '/about', key: "About" },
-        { name: 'Blog', link: '/blog', key: "Blog" },
-        { name: 'Recipes', link: '/recipes', key: "Recipes" },
+        { name: 'Home', link: '/', },
+        { name: 'About', link: '/about', },
+        { name: 'Blog', link: '/blog', },
+        { name: 'Recipes', link: '/recipes', },
     ];
 
   return (
-      <div className="navContainer">
+      <nav className="navContainer">
         <div className="navLogoContainer">
           <Link to="/">
             <div className="logoContainer">
@@ -21,15 +21,17 @@ function Navbar() {
             </div>
           </Link>
         </div>
-            <div className="navLinkBox">
-                {navLink.map((item) => (
-                    <Link to={item.link} key={item.key}>
-                        <li className="navLinkList">{item.name}</li>
-                    </Link>
-                ))}
-            </div>
+            <ul className="navLinkBox">
+              {navLink.map((item) => (
+                <NavLink 
+                to={item.link} 
+                className={({ isActive }) => (isActive ? 'activeNavLink' : '')}>
+                  <li>{item.name}</li>
+                </NavLink>
+              ))}
+            </ul>
         <div className="navSeperateLine"></div>
-      </div>
+      </nav>
   );
 }
 

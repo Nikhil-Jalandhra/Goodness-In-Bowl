@@ -5,11 +5,7 @@ import { useParams } from "react-router-dom";
 function BlogSummary() {
 
     const {id} = useParams();
-
-    const blogSummaryData = blogData.find(item => (item.id === Number(id)))
-
-    console.log(blogSummaryData);
-    
+    const blogSummaryData = blogData.find(item => (item.id === Number(id)));
 
   return (
     <div>
