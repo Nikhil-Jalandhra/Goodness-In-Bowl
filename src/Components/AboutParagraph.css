@@ -38,9 +38,11 @@
     line-height: 80px;
     animation: bouncy 15s infinite linear;
     font-size: 50px;
+    font-family: "classic2";
 }
 
 .aboutParagraphContainer span {
+    font-family: "classic2";
     font-size: 50px;
     color: red;
 }
