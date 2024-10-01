@@ -47,7 +47,6 @@ function Home() {
     const [homeBowlImage, setHomeBowlImage] = useState(getRandomBowlImage());
   
     useEffect(() => {
-      console.log("hello");
       const intervalId = setInterval(() => {
         setHomeBowlImage(getRandomBowlImage());
       }, 3000);
