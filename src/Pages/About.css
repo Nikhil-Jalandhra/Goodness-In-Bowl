@@ -3,8 +3,6 @@
     background-color: var(--baseColor);
     text-align: center;
     color: var(--fontColor);
-    font-family: "classic1";
-    font-size: 22px;
 }
 
 .aboutImageSection {
@@ -58,7 +56,6 @@
     align-items: center;
     justify-content: center;
     font-family: "classic2";
-    font-size: 20px;
     bottom: calc(0% - 50px);
     transition: 0.5s ease-out;
 }

@@ -46,7 +46,7 @@
 
 .blogSummaryText {
     width: 90%;
-    font-size: 22px;
+    /* font-size: 22px; */
 }
 
 .blogSummaryText p {
@@ -63,5 +63,6 @@
     font-family: "classic2";
     font-weight: 900;
     margin-top: 20px;
+    
 }
 

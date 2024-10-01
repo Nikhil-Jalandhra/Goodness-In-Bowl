@@ -11,5 +11,10 @@
     outline: 0;
     box-sizing: border-box;
     user-select: none;
-    /* background-color: var(--baseColor); */
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 30px;
 }

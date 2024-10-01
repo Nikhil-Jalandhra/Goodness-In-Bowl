@@ -36,7 +36,7 @@
 
 .recipeName {
     font-family: "classic2";
-    font-size: 70px;
+    font-size: 60px;
     color: var(--fontColor);
     text-align: center;
     margin-bottom: 10px;
@@ -46,7 +46,7 @@
 
 .recipeAboutDetailHeading {
     font-family: "classic2";
-    font-size: 40px;
+    font-size: 50px;
     color: var(--baseColor);
     background-color: var(--fontColor);
     text-align: center;
@@ -54,9 +54,7 @@
 }
 
 .recipeSummaryAboutContainer p {
-    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 10px;
-    font-size: 20px;
 }
 
 .recipeOfficialDetails {
@@ -69,8 +67,6 @@
 }
 
 .recipeOfficialDetails ul {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
     line-height: 30px;
 }
 
@@ -89,7 +85,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 .recipeVideoAbout {
@@ -97,11 +93,6 @@
     margin-top: 15px;
     padding-top: 15px;
     border-top: 2px solid var(--fontColor);
-}
-
-.recipeVideoAbout p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
 }
 
 .recipeVideoAbout a {
