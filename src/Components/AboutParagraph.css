@@ -1,3 +1,15 @@
+@keyframes bouncy {
+    0% {
+        font-weight: 900;
+    }
+    50% {
+        font-weight: 100;
+    }
+    100% {
+        font-weight: 900;
+    }
+}
+
 .aboutParagraphContainer{
     width: 100%;
     height: calc(100vh - 80px);
@@ -19,43 +31,31 @@
     letter-spacing: 5px;
     font-size: 15px;
     font-weight: 300;
-    /* margin-bottom: 10px; */
 }
 
 .aboutParagraphContent h1 {
     font-size: 60px;
     line-height: 80px;
     animation: bouncy 15s infinite linear;
+    font-size: 50px;
 }
 
 .aboutParagraphContainer span {
+    font-size: 50px;
     color: red;
 }
 
 .aboutParagraphContentP2 {
-    font-family: "classic1";
     margin-top: 50px;
-    font-size: 22px;
 }
 
 .aboutParagraphContentP2 a {
     text-decoration: none;
 }
 
-@keyframes bouncy {
-    0% {
-        font-weight: 900;
-    }
-    50% {
-        font-weight: 100;
-    }
-    100% {
-        font-weight: 900;
-    }
-}
-
 .aboutParagraphContentP2 span {
     font-family: "classic2";
+    font-size: 22px;
     font-weight: 900;
     color: var(--fontColor);
 }

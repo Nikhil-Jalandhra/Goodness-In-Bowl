@@ -26,8 +26,8 @@ function RecipeSummary() {
             <div className="recipeOfficialDetails">
                 <h1 className="recipeNutIng">Nutrients:</h1>
                 <ul>
-                    {recipeSummaryData?.nutrients?.map((item) => (
-                        <li>{item}</li>
+                    {recipeSummaryData?.nutrients?.map((item, index) => (
+                        <li key={index}>{item}</li>
                     ))}
                 </ul>
             </div>
@@ -37,8 +37,8 @@ function RecipeSummary() {
             <h1 className="recipeAboutDetailHeading">Details</h1>
                 <h1 className="recipeNutIng">Ingredients:</h1>
                 <ul>
-                    {recipeSummaryData?.ingredients.map((item) => (
-                        <li>{item}</li>
+                    {recipeSummaryData?.ingredients.map((item, index) => (
+                        <li key={index}>{item}</li>
                     ))}
                 </ul>
                 <div className="recipeButtons">

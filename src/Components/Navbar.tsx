@@ -24,6 +24,7 @@ function Navbar() {
             <ul className="navLinkBox">
               {navLink.map((item) => (
                 <NavLink 
+                key={item.name}
                 to={item.link} 
                 className={({ isActive }) => (isActive ? 'activeNavLink' : '')}>
                   <li>{item.name}</li>

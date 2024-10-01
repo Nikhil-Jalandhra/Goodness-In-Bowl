@@ -4,7 +4,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    font-size: 21px;
     color: var(--fontColor);
     background-color:var(--baseColor);
     padding: 0 70px;
@@ -29,12 +28,11 @@
 }
 
 .logoContainer h1 {
-    font-family: classic2;
-    font-size: 30px; 
+    font-family: "classic2";
 }
 
 .logoContainer span {
-    font-size: 25px; 
+    font-size: 30px; 
     margin-left: 5px;
 }
 
@@ -43,9 +41,7 @@
     align-items: center;
     justify-content: end;
     list-style-type: none;
-    font-size: 19px;
     font-weight: 300;
-    font-family: "classic1";
 }
 
 .navLinkBox a {
@@ -53,6 +49,7 @@
 }
 
 .navLinkBox li {
+    font-size: 16px;
     font-weight: 400;
     color: var(--fontColor);
     padding-left: 35px;
@@ -66,7 +63,7 @@
 
 .activeNavLink li {
     font-weight: 900;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 .navSeperateLine {

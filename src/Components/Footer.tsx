@@ -1,5 +1,5 @@
 import "./Footer.css"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import mainText from "/Images/mainText.png"
 
 function Footer() {
@@ -20,9 +20,12 @@ function Footer() {
         </div>
         <div className="footerLinks">
             {navLink.map((item) => (
-              <Link to={item.link} key={item.key}>
+              <NavLink 
+              to={item.link} 
+              key={item.key}
+              className={({ isActive }) => (isActive ? 'activeNavLink' : '')}>
                   <li className="navLinkList">{item.name}</li>
-              </Link>
+              </NavLink>
             ))}
         </div>
         <div className="footerLegal">
