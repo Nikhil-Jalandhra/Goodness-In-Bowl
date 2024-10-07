@@ -102,3 +102,24 @@
     font-size: 25px;
     color: red;
 }
+
+.recipeInstructionsContainer {
+    width: 90%;
+    padding: 30px 20px;
+}
+
+.recipeInstructionsContainer {
+    font-family: "classic2";
+}
+
+.recipeInstructionsContainer h2 {
+    margin-top: 20px;
+}
+
+.recipeInstructions {
+    margin-top: 20px;
+}
+
+.recipeInstructions span {
+    font-weight: 700;
+}
