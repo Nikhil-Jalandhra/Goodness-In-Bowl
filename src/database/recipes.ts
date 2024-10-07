@@ -5,7 +5,6 @@ import recipe4 from "/Images/recipe4.jpg";
 import recipe5 from "/Images/recipe5.jpg";
 
 const allRecipies = [
-    
     {
         id: 1,
         name: "Poha",
@@ -43,13 +42,24 @@ const allRecipies = [
             "Vitamin C: 20% of Daily Value",
             "Iron: 20% of Daily Value",
             "Calcium: 4% of Daily Value"
-        ]
+        ],
+        instructions: {
+            "Prepare Poha": "Rinse the poha gently in water 2-3 times and drain completely. Let it sit for 5 minutes to soften.",
+            "Cook Potatoes and Peanuts (Optional)": "Heat oil in a pan. Add diced potatoes and cook until golden brown. If using peanuts, add them and roast until crunchy. Remove and set aside.",
+            "Tempering": "In the same pan, add mustard seeds and cumin seeds. Once they start to splutter, add chopped green chilies, curry leaves, and onions. Sauté until the onions turn translucent.",
+            "Add Turmeric": "Add turmeric powder and mix well for about 30 seconds.",
+            "Mix Poha": "Gently add the soaked poha, cooked potatoes, peanuts, sugar, and salt. Stir everything gently to coat the poha with spices. Cook for 2-3 minutes on low heat.",
+            "Finish": "Turn off the heat and add lemon juice. Mix well and garnish with chopped coriander leaves, grated coconut, and sev if desired.",
+            "Serve": "Serve hot with a side of tea or chutney."
+        },
+        greeting: "Enjoy your flavorful and light poha!"
     },
     {
         id: 2,
         name: "Chole Bhature",
         about: "Chole Bhature is a classic North Indian dish that brings together the rich flavors of spiced chickpeas (chole) served alongside fluffy, deep-fried bread (bhature). This hearty meal is perfect for lunch or dinner and is often accompanied by pickles and yogurt, making it a complete and satisfying experience for your taste buds.",
         ingredients: [
+            "For Chole:",
             "1 cup chickpeas",
             "1 large onion, chopped",
             "1 large tomato, chopped",
@@ -61,7 +71,13 @@ const allRecipies = [
             "1 teaspoon garam masala",
             "2 tablespoons oil",
             "Salt to taste",
-            "Bhature dough (2 cups)"
+            "Water (as needed)",
+            "For Bhature:",
+            "2 cups all-purpose flour",
+            "1 teaspoon salt",
+            "2 tablespoons oil",
+            "Water (as needed)",
+            "Oil for deep frying"
         ],
         recipeVideoLink: "https://www.youtube.com/watch?v=example",
         recipeHeroImage: recipe2,
@@ -84,7 +100,17 @@ const allRecipies = [
             "Vitamin C: 15% of Daily Value",
             "Iron: 25% of Daily Value",
             "Calcium: 6% of Daily Value"
-        ]
+        ],
+        instructions: {
+            "Prepare Chickpeas": "Soak chickpeas overnight in water. Drain and rinse before cooking.",
+            "Cook Chole": "In a pressure cooker, heat oil. Add cumin seeds, chopped onions, and sauté until golden. Add ginger-garlic paste and green chili, cooking for another minute.",
+            "Add Tomatoes and Spices": "Stir in chopped tomatoes, coriander powder, cumin powder, garam masala, and salt. Cook until tomatoes are soft.",
+            "Pressure Cook": "Add the soaked chickpeas and enough water. Close the lid and pressure cook for about 15-20 minutes until soft.",
+            "Prepare Bhature Dough": "In a bowl, mix all-purpose flour, salt, and oil. Gradually add water to knead a soft dough. Cover and let it rest for at least 30 minutes.",
+            "Fry Bhature": "Divide the dough into small balls. Roll each ball into a circle about 6 inches in diameter. Heat oil in a deep pan and fry each bhature until puffed and golden.",
+            "Serve": "Serve hot chole with bhature, pickles, and yogurt."
+        },
+        greeting: "Enjoy your delicious Chole Bhature!"
     },
     {
         id: 3,
@@ -124,7 +150,16 @@ const allRecipies = [
             "Vitamin C: 25% of Daily Value",
             "Iron: 15% of Daily Value",
             "Calcium: 4% of Daily Value"
-        ]
+        ],
+        instructions: {
+            "Prepare Noodles": "Cook chow mein noodles according to package instructions. Drain and set aside.",
+            "Stir-fry Vegetables": "In a large pan, heat oil. Add minced garlic and ginger, sautéing until fragrant. Add mixed vegetables and stir-fry until tender.",
+            "Add Protein": "Add sliced chicken or tofu to the pan. Cook until chicken is no longer pink or tofu is golden.",
+            "Combine Noodles and Sauce": "Add cooked noodles, soy sauce, oyster sauce (if using), and sesame oil. Toss everything together until well combined.",
+            "Finish": "Season with salt and pepper to taste. Garnish with green onions before serving.",
+            "Serve": "Serve hot as a main dish."
+        },
+        greeting: "Enjoy your vibrant and flavorful Chow Mein!"
     },
     {
         id: 4,
@@ -168,7 +203,16 @@ const allRecipies = [
             "Vitamin C: 30% of Daily Value",
             "Iron: 15% of Daily Value",
             "Calcium: 8% of Daily Value"
-        ]
+        ],
+        instructions: {
+            "Prepare Rice": "Rinse basmati rice in water until it runs clear. Soak for 30 minutes, then drain.",
+            "Sauté Onions": "In a large pot, heat oil or ghee. Add sliced onions and sauté until golden brown.",
+            "Cook Vegetables": "Add ginger-garlic paste and sauté for a minute. Then add chopped tomatoes, mixed vegetables, and green chilies. Cook until vegetables are tender.",
+            "Add Spices and Rice": "Stir in coriander powder, garam masala, and salt. Add soaked rice and saffron strands (if using). Mix well.",
+            "Add Water": "Pour in 4 cups of water. Bring to a boil, then reduce heat, cover, and simmer for about 20 minutes until rice is cooked.",
+            "Garnish and Serve": "Once done, fluff the biryani with a fork. Garnish with fresh cilantro and mint. Serve with raita or salad."
+        },
+        greeting: "Enjoy your aromatic Vegetable Biryani!"
     },
     {
         id: 5,
@@ -208,7 +252,15 @@ const allRecipies = [
             "Vitamin C: 10% of Daily Value",
             "Iron: 10% of Daily Value",
             "Calcium: 2% of Daily Value"
-        ]
+        ],
+        instructions: {
+            "Prepare Filling": "In a pan, heat oil. Add cumin seeds and let them splutter. Add green chilies, boiled potatoes, green peas, coriander powder, garam masala, and salt. Mix well and cook for 5 minutes. Let the filling cool.",
+            "Make Dough": "In a bowl, mix all-purpose flour and salt. Add oil and mix until crumbly. Gradually add water to form a soft dough. Cover and let it rest for 20 minutes.",
+            "Shape Samosas": "Divide the dough into equal portions. Roll each portion into a circle, then cut it in half. Form a cone with each half, sealing the edge with water. Fill the cone with the potato filling and seal the top.",
+            "Fry Samosas": "Heat oil in a deep pan. Once hot, carefully drop the samosas in batches. Fry until golden brown and crispy.",
+            "Serve": "Serve hot with chutneys or sauce."
+        },
+        greeting: "Enjoy your crispy and delicious Samosas!"
     }
 ];
 
