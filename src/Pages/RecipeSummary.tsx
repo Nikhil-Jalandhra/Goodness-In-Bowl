@@ -55,18 +55,18 @@ function RecipeSummary() {
             </div>
             <img src={recipeSummaryData?.recipeHeroImage} alt={recipeSummaryData?.name} />
          </div>
-         <iframe width="90%" height="500px" src="https://www.youtube.com/embed/XuttnylxuXY?si=XwsX31TDDp9IO1YG" title={recipeSummaryData?.name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
          <div className="recipeInstructionsContainer">
           <h1>Instructions :</h1>
          {recipeSummaryData?.instructions && (
-            Object.keys(recipeSummaryData.instructions).map((key) => (
-              <div key={key} className="recipeInstructions">
+           Object.keys(recipeSummaryData.instructions).map((key) => (
+             <div key={key} className="recipeInstructions">
                 <p><span>{key}:</span> {typeInstructions[key]}</p>
               </div>
             ))
           )}
           <h2>{recipeSummaryData?.greeting}</h2>
          </div>
+          <iframe width="90%" height="500px" src="https://www.youtube.com/embed/XuttnylxuXY?si=XwsX31TDDp9IO1YG" title={recipeSummaryData?.name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
          <div className="recipeVideoAbout">
             <p>Follow for more: <Link to="/">GOODNESS IN BOWL</Link></p>
          </div>
