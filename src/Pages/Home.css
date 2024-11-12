@@ -86,7 +86,7 @@
 }
 
 .homeBlogCardDisplay {
-    width: 80%;
+    /* width: 80%; */
     display: grid;
     margin: 50px 0;
     grid-template-columns: repeat(3, 1fr);
@@ -112,7 +112,7 @@
 }
 
 .homeRecipeCardDisplay {
-    width: 80%;
+    /* width: 80%; */
     display: grid;
     margin: 50px 0;
     grid-template-columns: repeat(3, 1fr);
