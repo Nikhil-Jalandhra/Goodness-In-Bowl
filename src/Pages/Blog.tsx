@@ -22,14 +22,6 @@ function Blog() {
   headingElement?.addEventListener("mouseenter", handleMouseEnter);
   headingElement?.addEventListener("mouseleave", handleMouseLeave);
 
-  console.log("hl");
-  
-  
-  // return () => {
-  //   headingElement?.removeEventListener("mouseenter", handleMouseEnter);
-  //   headingElement?.removeEventListener("mouseleave", handleMouseLeave);
-  // };
-
  }, []);
 
   return (
