@@ -5,6 +5,20 @@
     color: var(--fontColor);
 }
 
+.aboutHeroImg {
+    padding: 10px 70px 0 70px;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutHeroImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .aboutImageSection {
     width: 100%;
     height: 100vh;
