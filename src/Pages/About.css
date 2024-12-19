@@ -87,15 +87,12 @@
     grid-row: 2 / 3;
 }
 
-.oneAboutImage:hover .oneAboutImageCover {
-    bottom: 0;
-}
-.twoAboutImage:hover .twoAboutImageCover {
-    bottom: 0;
-}
+.oneAboutImage:hover .oneAboutImageCover,
+.twoAboutImage:hover .twoAboutImageCover,
 .threeAboutImage:hover .threeAboutImageCover {
     bottom: 0;
 }
+
 
 .twoAboutImage {
     grid-column: 10 / 16;
@@ -113,11 +110,98 @@
 
 .aboutTextSection {
     width: 100%;
-    height: 250px;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .aboutTextContainer {
     width: 65%;
+}
+
+/*-----------------------------------------------------*/
+
+.aboutCommitContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+.aboutCommitSection {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+}
+.commitment {
+    font-family: "classic2";
+    font-size: 50px;
+}
+
+.aboutCommitSection h1 {
+    grid-column: 1/4;
+}
+
+.aboutCommitSectionImg {
+    width: 350px;
+    height: 400px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+.aboutCommitSectionImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+}
+
+.aboutCommitSectionImg:hover img {
+    transform: scale(1.1);
+}
+
+.aboutCommitRightContainer,
+.aboutCommitLeftContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aboutCommitRight,
+.aboutCommitLeft {
+    display: flex;
+}
+
+.aboutCommitRight h1,
+.aboutCommitLeft h1 {
+    text-wrap: nowrap;
+    margin-bottom: 10px;
+}
+
+.aboutCommitLeftText {
+    text-align: right;
+}
+
+.aboutCommitRightText {
+    text-align: left;
+}
+
+.aboutCommitRight span,
+.aboutCommitLeft span {
+    padding: 10px;
+    width: 70px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--fontColor);
+    margin: 0 10px;
+    /* font-size: 250px; */
 }

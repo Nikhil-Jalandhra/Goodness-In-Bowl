@@ -6,6 +6,12 @@ import about3 from "/Images/about3.jpg"
 import aboutHero from "/Images/aboutHero.jpg";
 import aboutCommit from "/Images/aboutCommit.jpg";
 
+//---------------------------------------------------
+import { LiaPrayingHandsSolid } from "react-icons/lia";
+import { GiHotSpices } from "react-icons/gi";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import { MdOutlineHighQuality } from "react-icons/md";
+
 function About() {
   return (
     <div>
@@ -35,27 +41,50 @@ function About() {
           <p>Join us on this delicious journey toward a more conscious and flavorful lifestyle. Together, we’ll explore the joys of cooking, the importance of mindful eating, and the incredible impact that good food can have on our well-being. Welcome to a community that celebrates health, happiness, and the wonderful world of nutritious food</p>
           </div>
         </div>
-        <div>
-          <h1>Our commitment to sustainability</h1>
-          <div>
-            <h1>hlo</h1>
-            <p>bilo</p>
+        <div className="aboutCommitContainer">
+
+        <div className="aboutCommitSection">
+          <h1 className="commitment">Our commitment to sustainability</h1>
+
+          <div className="aboutCommitLeftContainer">
+            <div className="aboutCommitLeft">
+              <div className="aboutCommitLeftText">
+                <h1>A welcoming environment</h1>
+                <p>A warm, friendly atmosphere where everyone feels comfortable and valued.</p>
+              </div>
+              <span><LiaPrayingHandsSolid/></span>
+            </div>
+            <div className="aboutCommitLeft">
+              <div className="aboutCommitLeftText">
+                <h1>Uncompromising quality</h1>
+                <p>Maintaining the highest standards in every ingredient, dish, and dining experience.</p>
+              </div>
+              <span><MdOutlineHighQuality/></span>
+            </div>
           </div>
-          <div>
-            <h1>hlo</h1>
-            <p>bilo</p>
-          </div>
-          <div>
+
+          <div className="aboutCommitSectionImg">
             <img src={aboutCommit} alt="" />
           </div>
-          <div>
-            <h1>hlo</h1>
-            <p>bilo</p>
+
+          <div className="aboutCommitRightContainer">
+            <div className="aboutCommitRight">
+              <span><GiHotSpices/></span>
+              <div className="aboutCommitRightText">
+                <h1>Authentic flavors</h1>
+                <p>Dishes made with genuine, traditional ingredients, delivering true, original tastes.</p>
+              </div>
+            </div>
+            <div className="aboutCommitRight">
+              <span><RiCustomerService2Fill/></span>
+              <div className="aboutCommitRightText">
+                <h1> Attentive service</h1>
+                <p>Providing thoughtful, prompt care to ensure every guest feels well-looked after.</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <h1>hlo</h1>
-            <p>bilo</p>
-          </div>
+        </div>
+
         </div>
       </div>
     </div>
