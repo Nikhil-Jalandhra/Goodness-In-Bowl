@@ -1,8 +1,5 @@
 import "./RecipeSummary1.css";
 import { Link } from "react-router-dom";
-import { RxLapTimer } from "react-icons/rx";
-import { IoPersonSharp } from "react-icons/io5";
-import { PiCookingPotFill } from "react-icons/pi";
 import { LiaCircle } from "react-icons/lia";
 import { useParams } from "react-router-dom";
 import allRecipies from "../database/recipes";
