@@ -18,7 +18,7 @@ interface recipeCardData {
       prepTime: string,
       cookTime: string,
       category: string,
-      nutrients: string[]
+      nutrients: object
   }
 }
 
