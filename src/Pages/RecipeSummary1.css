@@ -1,0 +1,148 @@
+.recipeSummaryContainer1{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: var(--baseColor);
+    color: var(--fontColor);
+    padding: 0 70px;
+}
+
+.recipeSummaryContent1 {
+    width: 80%;
+    height: 100%;
+    padding: 10px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.recipeSummaryAbout1 {
+    width: 100%;
+}
+.recipeSummaryContent1 h1 {
+    margin-top: 10px;
+}
+
+.recipeAboutP {
+    padding-top: 15px;
+    width: 90%;
+}
+
+.recipeVideoAbout1 {
+    width: 90%;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid var(--fontColor);
+}
+
+.recipeName1 {
+    font-family: "classic2";
+    font-size: 50px;
+    color: var(--fontColor);
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.recipeSummaryHeroImg1 {
+    width: 90%;
+    height: 500px;
+    overflow: hidden;
+    background-color: #BD8A42;
+    
+}
+
+.recipeSummaryHeroImg1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+}
+
+.recipeSummaryHeroImg1:hover img {
+    transform: scale(1.1);
+}
+
+.ingredinetsTable {
+    width: 90%;
+    margin: 20px 0;
+    border-bottom: 1px solid var(--fontColor);
+}
+
+.ingredinetsTableRow {
+    display: flex;
+    border-top: 1px solid var(--fontColor);
+}
+
+.ingredinetsTableRow p {
+    border-right: 1px solid var(--fontColor);
+}
+
+.ingredinetsTableRow h2,
+.ingredinetsTableRow p {
+    padding: 10px;
+}
+
+.reicpeNutrients {
+    display: flex;
+    margin: 20px 0;
+}
+
+.nutrientsHeading {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid var(--fontColor);
+    background-color: #E29256;
+}
+
+.reicpeNutrientsDetails {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--fontColor);
+    border-top: 1px solid var(--fontColor);
+    border-right: 1px solid var(--fontColor);
+}
+
+.reicpeNutrientsDetails p{
+    font-size: 18px;
+}
+
+.reicpeNutrientsDetails h2{
+    font-size: 15px;
+}
+
+/* -------------------------------------- */
+
+.recipeInstructionsContainer1 {
+    width: 90%;
+    padding-bottom: 30px;
+}
+
+.recipeInstructionsContainer1 h1 {
+    font-family: "classic2";
+}
+
+.recipeInstructionsContainer1 h2 {
+    margin-top: 20px;
+}
+
+.recipeInstructions1 {
+    margin-top: 20px;
+}
+
+.recipeInstructions1 span {
+    font-weight: 700;
+}
+
+.recipeVideoAbout1 a {
+    text-decoration: none;
+    font-family: "classic2";
+    font-weight: 900;
+    font-size: 25px;
+    color: red;
+}
