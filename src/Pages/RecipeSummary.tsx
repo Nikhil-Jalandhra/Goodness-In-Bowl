@@ -15,8 +15,13 @@ function RecipeSummary() {
     type RecipeInstructions = {
       [key: string]: string | undefined;
     };
+
+    type RecipeNutrients = {
+      [key: string]: string | undefined;
+    };
     
     const typeInstructions: RecipeInstructions = recipeSummaryData?.instructions || {};
+    const typeNutrients: RecipeNutrients = recipeSummaryData?.nutrients || {};
     
 
   return (
@@ -32,9 +37,12 @@ function RecipeSummary() {
             <div className="recipeOfficialDetails">
                 <h1 className="recipeNutIng">Nutrients:</h1>
                 <ul>
-                    {recipeSummaryData?.nutrients?.map((item, index) => (
-                        <li key={index}>{item}</li>
-                    ))}
+                    {recipeSummaryData?.nutrients && (
+                      Object.keys(recipeSummaryData?.nutrients).map((key)=> (
+                        <li><span>{key}</span>:{typeNutrients[key]}</li>
+
+                      ))
+                    )}
                 </ul>
             </div>
             </div>
@@ -60,7 +68,7 @@ function RecipeSummary() {
          {recipeSummaryData?.instructions && (
            Object.keys(recipeSummaryData.instructions).map((key) => (
              <div key={key} className="recipeInstructions">
-                <p><span>{key}:</span> {typeInstructions[key]}</p>
+                <p><span>{key}:</span>&nbsp {typeInstructions[key]}</p>
               </div>
             ))
           )}
