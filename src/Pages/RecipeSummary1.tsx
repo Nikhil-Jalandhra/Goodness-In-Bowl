@@ -73,6 +73,7 @@ function RecipeSummary1() {
                 </div>
          
                 <iframe width="100%" height="500px" src="https://www.youtube.com/embed/XuttnylxuXY?si=XwsX31TDDp9IO1YG" title={recipeSummaryData?.name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
                 <div className="recipeVideoAbout1">
                     <p>Follow for more: <Link to="/">GOODNESS IN BOWL</Link></p>
                 </div>
