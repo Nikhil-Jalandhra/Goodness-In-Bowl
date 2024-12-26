@@ -76,6 +76,11 @@
     border-top: 1px solid var(--fontColor);
 }
 
+.ingredinetsTableRowDone h2 {
+    text-decoration: line-through;
+    color: #894820;
+}
+
 .ingredinetsTableRow p {
     border-right: 1px solid var(--fontColor);
 }

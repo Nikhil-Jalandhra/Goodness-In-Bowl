@@ -1,9 +1,11 @@
 import "./RecipeSummary1.css";
 import { Link } from "react-router-dom";
 import { LiaCircle } from "react-icons/lia";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { useParams } from "react-router-dom";
 import allRecipies from "../database/recipes";
 import viewMore from "/Images/recipe1.jpg";
+import { useState } from "react";
 
 
 function RecipeSummary1() {
@@ -21,6 +23,14 @@ function RecipeSummary1() {
     
     const typeInstructions: RecipeInstructions = recipeSummaryData?.instructions || {};
     const typeNutrients: RecipeNutrients = recipeSummaryData?.nutrients || {};
+
+    const [ingredientDone, setIngredientDone] = useState({});
+
+    const ingredientToggle = (index) => {
+      setIngredientDone((prevState) => ({ ...prevState, [index]: !prevState[index] }));
+    };
+
+    // setIngredientDone(() => {})
 
   return (
     <div>
@@ -54,8 +64,9 @@ function RecipeSummary1() {
             <h1>Ingredients</h1>
                 <div className="ingredinetsTable">
                 {recipeSummaryData?.ingredients.map((item, index) => (
-                  <div className="ingredinetsTableRow" key={index}>
-                    <p className="tableDot"><LiaCircle /></p>
+                  <div className={`ingredinetsTableRow ${ingredientDone[index] ? "ingredinetsTableRowDone" : ""}`} key={index} 
+                  onClick={() => ingredientToggle(index)}>
+                    <p className="tableDot">{ingredientDone[index] ? <IoIosCheckmarkCircleOutline /> : <LiaCircle/>}</p>
                     <h2>{item}</h2>
                   </div>
                 ))}
