@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BlogSummary from './Pages/BlogSummary';
 import RecipeSummary from './Pages/RecipeSummary';
 import RecipeSummary1 from './Pages/RecipeSummary1';
+import RecipeSample from './Pages/RecipeSample';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route element={<Blog/>} path='/blog'/>
         <Route element={<BlogSummary/>} path='/blog/:id/:title'/>
         <Route element={<Recipes/>} path='/recipes'/>
+        <Route element={<RecipeSample/>} path='/recipesSample'/>
         <Route element={<RecipeSummary/>} path='/recipes/:id/:title'/>
         <Route element={<RecipeSummary1/>} path='/recipes1/:id/:title'/>
       </Routes>

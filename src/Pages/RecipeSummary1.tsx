@@ -91,16 +91,8 @@ function RecipeSummary1() {
         </div>
 
         <div className="recipeSummaryContent2">
-          <div className="authorAbout">
-            <p>About Me</p>
-            <div className="avatarImage">
-            <img src="https://www.aiscribbles.com/img/variant/large-preview/33200/?v=57dffb" alt="avtar" />
-            </div>
-            <h1>Hi!  I'm Anita Jailwal</h1>
-            <p>Dedicated to crafting vibrant, wholesome bowls that blend simplicity, flavor, and nourishment. Perfect for every meal and moment.</p>
-          </div>
           <div className="viewMoreRecipes">
-            <h2>View More</h2>
+            <h2 className="viewMoreHeading">View More</h2>
             <div className="sepcificRecipe">
               <div className="viewMoreRecipesImg">
                 <img src={viewMore} alt="recipe" />
