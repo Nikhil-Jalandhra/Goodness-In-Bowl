@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import { LiaCircle } from "react-icons/lia";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { useParams } from "react-router-dom";
-import allRecipies from "../database/recipes";
 import viewMore from "/Images/recipe1.jpg";
 import { useState } from "react";
+import recipes from "../database/recipes1";
 
 
 function RecipeSummary1() {
 
     const { id } = useParams();
-    const  recipeSummaryData = allRecipies.find(item => (item.id === Number(id)));
+    const  recipeSummaryData = recipes.find(item => (item.id === Number(id)));
 
     type RecipeInstructions = {
       [key: string]: string | undefined;
@@ -25,12 +25,10 @@ function RecipeSummary1() {
     const typeNutrients: RecipeNutrients = recipeSummaryData?.nutrients || {};
 
     const [ingredientDone, setIngredientDone] = useState({});
-
-    const ingredientToggle = (index) => {
-      setIngredientDone((prevState) => ({ ...prevState, [index]: !prevState[index] }));
+    
+    const ingredientToggle = (itemName) => {
+      setIngredientDone((prevState) => ({ ...prevState, [itemName]: !prevState[itemName] }));
     };
-
-    // setIngredientDone(() => {})
 
   return (
     <div>
@@ -40,7 +38,7 @@ function RecipeSummary1() {
 
             <div className="recipeSummaryAbout1">
               <div className="recipeSummaryHeroImg1">
-                <img src={recipeSummaryData?.recipeHeroImage} alt="" />
+                <img src={recipeSummaryData?.image} alt="" />
               </div>
               <div className="recipeAboutP">
                 <p>{recipeSummaryData?.about}</p>
@@ -52,8 +50,8 @@ function RecipeSummary1() {
                   <h2>Nutrients</h2>
                 </div>
                 {recipeSummaryData?.nutrients && (
-                  Object.keys(recipeSummaryData?.nutrients).map((key)=> (
-                    <div key={key} className="reicpeNutrientsDetails">
+                  Object.keys(recipeSummaryData?.nutrients).map((key, index)=> (
+                    <div key={key} className="reicpeNutrientsDetails" key={index}>
                       <p>{typeNutrients[key]}</p>
                       <h2>{key}</h2>
                     </div>
@@ -61,29 +59,62 @@ function RecipeSummary1() {
                 )}
             </div>
 
-            <h1>Ingredients</h1>
                 <div className="ingredinetsTable">
-                {recipeSummaryData?.ingredients.map((item, index) => (
-                  <div className={`ingredinetsTableRow ${ingredientDone[index] ? "ingredinetsTableRowDone" : ""}`} key={index} 
-                  onClick={() => ingredientToggle(index)}>
-                    <p className="tableDot">{ingredientDone[index] ? <IoIosCheckmarkCircleOutline /> : <LiaCircle/>}</p>
-                    <h2>{item}</h2>
-                  </div>
+                  {recipeSummaryData?.ingredientSections.map((item, index) => (
+                    <div key={index}>
+                      <h1>{item.name}</h1>
+                      <div>
+                        <div>{item.items.map((item, index) => (
+                            <div onClick={() => ingredientToggle(item.name)} 
+                            className={`ingredinetsTableRow ${ingredientDone[item.name] ? "ingredinetsTableRowDone" : ""}`} key={index} style={{display: "flex"}}>
+                                <p className="tableDot">{ingredientDone[item.name] ? <IoIosCheckmarkCircleOutline /> : <LiaCircle/>}</p>
+                                <h2>{item.name}, {item.quantity}, {item.unit}</h2>
+                            </div>
+                        ))}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div>
+                  <h1>Tools You Need</h1>
+                  {recipeSummaryData?.tools.map((item, index)=> (
+                    <p key={index}>{index+1}. {item}</p>
+                  ))}
+                </div>
+
+                <div>
+                  <h1>Prepration</h1>
+                {recipeSummaryData?.preparationSteps.map((item, index)=> (
+                  <p key={index}>{index+1}. {item}</p>
                 ))}
+                  
                 </div>
 
                 <div className="recipeInstructionsContainer1">
-                  <h1>Direction :</h1>
-                {recipeSummaryData?.instructions && (
+                  {/* <h1>Direction :</h1> */}
+                {/* {recipeSummaryData?.instructions && (
                   Object.keys(recipeSummaryData.instructions).map((key) => (
                     <div key={key} className="recipeInstructions1">
                         <p><span>{key}:</span> {typeInstructions[key]}</p>
                       </div>
                     ))
-                  )}
+                    )} */}
+                  {recipeSummaryData?.cookingSteps.map((item, index)=> (
+                    <div key={index}>
+                      <h1>{item.name}</h1>
+                      {item.steps.map((item,index)=> (
+                        <p key={index}>{index+1}. {item}</p>
+                      ))}
+                    </div>
+                  ))}
                 </div>
          
+                <h2>"{recipeSummaryData?.servingSuggestions}"</h2>
+                      
                 <iframe width="100%" height="500px" src="https://www.youtube.com/embed/XuttnylxuXY?si=XwsX31TDDp9IO1YG" title={recipeSummaryData?.name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
+                <h2>"{recipeSummaryData?.notes}"</h2>
 
                 <div className="recipeVideoAbout1">
                     <p>Follow for more: <Link to="/">GOODNESS IN BOWL</Link></p>

@@ -26,7 +26,7 @@ function RecipeSample() {
         <div style={{display: "flex"}}>{Object.keys(recipeData?.nutrients || {}).map((item, index) => (
             <div key={index}>
                 <p>
-                    {item.charAt(0).toUpperCase() + item.slice(1)}: {recipeData?.nutrients[item]}
+                    {item.charAt(0).toUpperCase()} {recipeData?.nutrients[item]}
                 </p>
             </div>
         ))}</div>
