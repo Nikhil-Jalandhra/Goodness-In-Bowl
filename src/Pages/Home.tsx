@@ -14,7 +14,7 @@ import allBlogs from "../database/blog";
 import AboutParagraph from "../Components/AboutParagraph";
 import BlogCard from "../Components/BlogCard";
 import RecipeCard from "../Components/RecipeCard";
-import allRecipies from "../database/recipes";
+import allRecipies from "../database/recipes1";
 import home1 from "/Images/home1.jpg";
 import home2 from "/Images/home2.jpg";
 import home3 from "/Images/home3.jpg";
@@ -83,7 +83,7 @@ function Home() {
             <h1 className="homeRecipeHeading">Our Recipes</h1>
             <div className="homeRecipeCardDisplay">
               {allRecipies.map((item) => (
-                item.id <= 3 && <RecipeCard item={item} key={item.id}/>
+                item.id <= 4 && <RecipeCard item={item} key={item.id}/>
               ))}
             </div>
           </div>

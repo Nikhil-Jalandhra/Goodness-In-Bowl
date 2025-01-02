@@ -29,14 +29,14 @@ function RecipeCard({item}: recipeCardData) {
         <div className="recipeCard">
           <Link to={`/recipes1/${item.id}/${item.name}`}>
             <div className="recipeImageContainer">
-                <div className="recipeCategory">{item.category}</div>
+                <div className="recipeCategory">{item.cuisine}</div>
                 <div className="recipePreview">View Recipe <MdOutlineArrowOutward /></div>
-                <img src={item.recipeHeroImage} alt={item.name} />
+                <img src={item.image} alt={item.name} />
             </div>
             <div className="recipeDetailContainer">
-                <div className="recipeDetail"><IoPersonSharp />&nbsp;{item.servings} servings</div>
-                <div className="recipeDetail"><RxLapTimer />&nbsp;{item.prepTime} prep</div>
-                <div className="recipeDetail"><PiCookingPotFill />&nbsp;{item.cookTime} cook</div>
+                <div className="recipeDetail"><IoPersonSharp />&nbsp;{item.servings} serv</div>
+                <div className="recipeDetail"><RxLapTimer />&nbsp;{item.preparationTime} prep</div>
+                <div className="recipeDetail"><PiCookingPotFill />&nbsp;{item.cookingTime} cook</div>
             </div>
             <h1>{item.name}</h1>
           </Link>

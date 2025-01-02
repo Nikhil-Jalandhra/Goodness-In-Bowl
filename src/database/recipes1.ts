@@ -9,7 +9,7 @@ const recipes = [
         id: 1,
         name: "Chole Bhature",
         about: "Chole Bhature is a classic North Indian dish known for its rich, spicy chickpea curry (chole) paired with fluffy deep-fried bread (bhature). This hearty combination is a favorite for festive occasions and indulgent meals.",
-        image: recipe1,
+        image: recipe2,
         cuisine: "North Indian",
         ingredientSections: [
             {
@@ -57,8 +57,8 @@ const recipes = [
         storage: { shelfLife: "2 days", reheatingInstructions: "Reheat chole on the stove and warm bhature in an oven." },
         tags: ["Indian", "Lunch", "Traditional"],
         difficulty: "Medium",
-        preparationTime: "8 hours",
-        cookingTime: "40 minutes",
+        preparationTime: "8 hr",
+        cookingTime: "40 min",
         servings: 4,
         notes: "For extra flavor, garnish with fresh coriander and a squeeze of lemon."
     },
@@ -66,7 +66,7 @@ const recipes = [
         id: 2,
         name: "Poha",
         about: "Poha is a quick and light Indian breakfast dish made with flattened rice, spices, and aromatic tempering. It is both healthy and satisfying, perfect for starting your day.",
-        image: recipe2,
+        image: recipe1,
         cuisine: "Indian",
         ingredientSections: [
             {
@@ -101,8 +101,8 @@ const recipes = [
         storage: { shelfLife: "1 day", reheatingInstructions: "Microwave for 30 seconds or steam briefly." },
         tags: ["Indian", "Breakfast", "Quick"],
         difficulty: "Easy",
-        preparationTime: "5 minutes",
-        cookingTime: "10 minutes",
+        preparationTime: "5 min",
+        cookingTime: "10 min",
         servings: 2,
         notes: "For added flavor, include a pinch of sugar and grated coconut."
     },
@@ -145,8 +145,8 @@ const recipes = [
         storage: { shelfLife: "1 day", reheatingInstructions: "Stir-fry briefly to reheat." },
         tags: ["Indo-Chinese", "Snacks", "Quick"],
         difficulty: "Easy",
-        preparationTime: "10 minutes",
-        cookingTime: "15 minutes",
+        preparationTime: "10 min",
+        cookingTime: "15 min",
         servings: 2,
         notes: "Adjust the spice level by adding chili sauce or flakes."
     },
@@ -189,8 +189,8 @@ const recipes = [
         storage: { shelfLife: "2 days", reheatingInstructions: "Microwave or steam to reheat." },
         tags: ["Indian", "Lunch", "Aromatic"],
         difficulty: "Medium",
-        preparationTime: "20 minutes",
-        cookingTime: "40 minutes",
+        preparationTime: "20 min",
+        cookingTime: "40 min",
         servings: 4,
         notes: "Garnish with fried onions and fresh mint for added flavor."
     },
@@ -232,8 +232,8 @@ const recipes = [
         storage: { shelfLife: "1 day", reheatingInstructions: "Reheat in an oven for 5 minutes." },
         tags: ["Indian", "Snacks", "Crispy"],
         difficulty: "Medium",
-        preparationTime: "30 minutes",
-        cookingTime: "20 minutes",
+        preparationTime: "30 min",
+        cookingTime: "20 min",
         servings: 4,
         notes: "Ensure the oil is hot enough to avoid soggy samosas." 
     }
