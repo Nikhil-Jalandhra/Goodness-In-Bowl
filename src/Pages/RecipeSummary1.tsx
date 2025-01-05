@@ -5,7 +5,7 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { useParams } from "react-router-dom";
 import viewMore from "/Images/recipe1.jpg";
 import { useState } from "react";
-import recipes from "../database/recipes1";
+import recipes from "../database/recipes";
 
 
 function RecipeSummary1() {
@@ -13,20 +13,15 @@ function RecipeSummary1() {
     const { id } = useParams();
     const  recipeSummaryData = recipes.find(item => (item.id === Number(id)));
 
-    type RecipeInstructions = {
-      [key: string]: string | undefined;
-    };
-
     type RecipeNutrients = {
       [key: string]: string | undefined;
     };
     
-    const typeInstructions: RecipeInstructions = recipeSummaryData?.instructions || {};
     const typeNutrients: RecipeNutrients = recipeSummaryData?.nutrients || {};
 
-    const [ingredientDone, setIngredientDone] = useState({});
+    const [ingredientDone, setIngredientDone] = useState<Record<string, boolean>>({});
     
-    const ingredientToggle = (itemName) => {
+    const ingredientToggle = (itemName: string) => {
       setIngredientDone((prevState) => ({ ...prevState, [itemName]: !prevState[itemName] }));
     };
 
@@ -51,7 +46,7 @@ function RecipeSummary1() {
                 </div>
                 {recipeSummaryData?.nutrients && (
                   Object.keys(recipeSummaryData?.nutrients).map((key, index)=> (
-                    <div key={key} className="reicpeNutrientsDetails" key={index}>
+                    <div key={index} className="reicpeNutrientsDetails">
                       <p>{typeNutrients[key]}</p>
                       <h2>{key}</h2>
                     </div>
@@ -92,14 +87,6 @@ function RecipeSummary1() {
                 </div>
 
                 <div className="recipeInstructionsContainer1">
-                  {/* <h1>Direction :</h1> */}
-                {/* {recipeSummaryData?.instructions && (
-                  Object.keys(recipeSummaryData.instructions).map((key) => (
-                    <div key={key} className="recipeInstructions1">
-                        <p><span>{key}:</span> {typeInstructions[key]}</p>
-                      </div>
-                    ))
-                    )} */}
                   {recipeSummaryData?.cookingSteps.map((item, index)=> (
                     <div key={index}>
                       <h1>{item.name}</h1>

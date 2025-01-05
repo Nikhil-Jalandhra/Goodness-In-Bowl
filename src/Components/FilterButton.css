@@ -1,0 +1,22 @@
+.filterButtonWrap a {
+    text-decoration: none;
+    color: var(--fontColor);
+}
+
+.filterButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--baseColor);
+    border: 1px solid var(--fontColor);
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 0 8px;
+    transition: 0.5s;
+}
+
+.filterButtonContainer:hover {
+    background-color: #ddbd3f;
+    /* font-size: 15px; */
+    font-weight: 900;
+}

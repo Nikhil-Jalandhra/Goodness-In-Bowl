@@ -1,34 +1,54 @@
 import "./Recipes.css";
 import RecipeCard from "../Components/RecipeCard";
-import recipesData from "../database/recipes1.ts";
-import { useState } from "react";
+import recipesData from "../database/recipes.ts";
+import { useEffect, useState } from "react";
+import { useParams} from "react-router-dom";
+import FilterButton from "../Components/FilterButton.tsx";
 
 
 function Recipes() {
 
-  const [recipeFilter, setRecipeFilter] = useState("All");
-  let finalData = recipesData;
-
-  if (recipeFilter === "All") {
-    finalData = recipesData
-  }
-  else {
-    finalData = recipesData.filter((item) => (item.tags.includes(recipeFilter)))
-  };
+  const {filter} = useParams();
+  const [finalData, setFinalData] = useState(null);
+  
+  useEffect(() => {
+    const filterData = filter ? recipesData.filter((item) => (item.tags.includes(filter))) : recipesData;
+    
+    setFinalData(filterData);
+  }, [filter]);
+  
+  const FilterButtonArray = [
+    {
+      name: "All",
+      link: "/recipes"
+    },
+    {
+      name: "Breakfast",
+      link: "/recipes/Breakfast"
+    },
+    {
+      name: "Lunch",
+      link: "/recipes/Lunch"
+    },
+    {
+      name: "Quick",
+      link: "/recipes/Quick"
+    },
+  ]
 
 
   return (
     <div>
         <div className="recipesContainer">
-          <h1 className="recipesPageHeading">😋Tease Your Taste Buds!</h1>
-          <div>
-            <button onClick={() => setRecipeFilter("All")}>All</button>
-            <button onClick={() => setRecipeFilter("Breakfast")}>breakfast</button>
-            <button onClick={() => setRecipeFilter("Lunch")}>Lunch</button>
-            <button onClick={() => setRecipeFilter("Quick")}>Quick</button>
+
+          <div className="displayRecipeFilter">
+            {FilterButtonArray.map((item, index) => (
+              <FilterButton key={index} item={item}/>
+            ))}
           </div>
+
           <div className="recipesCardContainer">
-            {finalData.map((item, key) => (
+            {!finalData ? <p></p> : finalData.map((item, key) => (
               <RecipeCard item={item} key={key} />
             ))}
             </div>

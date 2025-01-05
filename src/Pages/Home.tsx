@@ -14,7 +14,7 @@ import allBlogs from "../database/blog";
 import AboutParagraph from "../Components/AboutParagraph";
 import BlogCard from "../Components/BlogCard";
 import RecipeCard from "../Components/RecipeCard";
-import allRecipies from "../database/recipes1";
+import allRecipies from "../database/recipes";
 import home1 from "/Images/home1.jpg";
 import home2 from "/Images/home2.jpg";
 import home3 from "/Images/home3.jpg";
@@ -23,6 +23,7 @@ import { SiInstagram } from "react-icons/si";
 import { FaFacebookSquare } from "react-icons/fa";
 import { TfiYoutube } from "react-icons/tfi";
 import { useState, useEffect, useCallback, useMemo } from "react";
+import FilterButton from "../Components/FilterButton";
 
 function Home() {
 
@@ -55,6 +56,25 @@ function Home() {
       return () => clearInterval(intervalId);
     }, [getRandomBowlImage]); // Now it's stable
 
+    const FilterButtonArray = [
+      {
+        name: "All",
+        link: "/recipes"
+      },
+      {
+        name: "Breakfast",
+        link: "/recipes/Breakfast"
+      },
+      {
+        name: "Lunch",
+        link: "/recipes/Lunch"
+      },
+      {
+        name: "Quick",
+        link: "/recipes/Qucik"
+      },
+    ]
+
   return (
     <div>
       <div className="homeContainer">
@@ -66,6 +86,12 @@ function Home() {
           <div className="homeBowlContainer">
           <img src={homeBowlImage} alt="Bowl" />
           </div>
+      </div>
+
+      <div className="displayRecipeFilter">
+        {FilterButtonArray.map((item, index) => (
+          <FilterButton key={index} item={item}/>
+        ))}
       </div>
       
           <AboutParagraph/>
