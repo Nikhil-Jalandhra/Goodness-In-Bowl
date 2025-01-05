@@ -9,7 +9,7 @@ import FilterButton from "../Components/FilterButton.tsx";
 function Recipes() {
 
   const {filter} = useParams();
-  const [finalData, setFinalData] = useState(null);
+  const [finalData, setFinalData] = useState<typeof recipesData>([]);
   
   useEffect(() => {
     const filterData = filter ? recipesData.filter((item) => (item.tags.includes(filter))) : recipesData;
