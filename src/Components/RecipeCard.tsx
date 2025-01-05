@@ -54,7 +54,7 @@ function RecipeCard({item}: RecipeCardData) {
   return (
     <div>
         <div className="recipeCard">
-          <Link to={`/recipes1/${item.id}/${item.name}`}>
+          <Link to={`/recipes/${item.id}/${item.name}`}>
             <div className="recipeImageContainer">
                 <div className="recipeCategory">{item.cuisine}</div>
                 <div className="recipePreview">View Recipe <MdOutlineArrowOutward /></div>
