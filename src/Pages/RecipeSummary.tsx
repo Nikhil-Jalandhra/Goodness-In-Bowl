@@ -8,7 +8,7 @@ import { useState } from "react";
 import recipes from "../database/recipes";
 
 
-function RecipeSummary1() {
+function RecipeSummary() {
 
     const { id } = useParams();
     const  recipeSummaryData = recipes.find(item => (item.id === Number(id)));
@@ -166,4 +166,4 @@ function RecipeSummary1() {
   );
 }
 
-export default RecipeSummary1;
+export default RecipeSummary;

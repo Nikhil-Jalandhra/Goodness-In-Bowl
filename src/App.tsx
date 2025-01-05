@@ -8,7 +8,6 @@ import Footer from './Components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BlogSummary from './Pages/BlogSummary';
 import RecipeSummary from './Pages/RecipeSummary';
-import RecipeSummary1 from './Pages/RecipeSummary';
 
 function App() {
 
