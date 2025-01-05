@@ -4,223 +4,239 @@ import recipe3 from "/Images/recipe3.jpg";
 import recipe4 from "/Images/recipe4.jpg";
 import recipe5 from "/Images/recipe5.jpg";
 
-const allRecipies = [
+const recipes = [
     {
         id: 1,
-        name: "Poha",
-        about: "Poha is a beloved Indian breakfast dish made from flattened rice, which is light yet filling. It's typically cooked with onions, diced potatoes, and green chilies, seasoned with mustard seeds and turmeric. The dish is garnished with fresh cilantro and served with lemon wedges for a burst of flavor, making it a perfect way to start your day.",
-        ingredients: [
-            "2 cups poha (flattened rice)",
-            "1 large onion, chopped",
-            "1 medium potato, diced",
-            "2 green chilies, chopped",
-            "1 teaspoon mustard seeds",
-            "1/2 teaspoon turmeric powder",
-            "2 tablespoons oil",
-            "Salt to taste",
-            "Fresh cilantro for garnish",
-            "Lemon wedges for serving"
+        name: "Chole Bhature",
+        about: "Chole Bhature is a classic North Indian dish known for its rich, spicy chickpea curry (chole) paired with fluffy deep-fried bread (bhature). This hearty combination is a favorite for festive occasions and indulgent meals.",
+        image: recipe2,
+        cuisine: "North Indian",
+        ingredientSections: [
+            {
+                name: "Chole Ingredients",
+                items: [
+                    { name: "Chickpeas (Kabuli Chana)", quantity: "1", unit: "cup (soaked overnight)" },
+                    { name: "Onion", quantity: "2", unit: "pieces (finely chopped)" },
+                    { name: "Tomato", quantity: "2", unit: "pieces (pureed)" },
+                    { name: "Chole Masala", quantity: "2", unit: "teaspoons" }
+                ]
+            },
+            {
+                name: "Bhature Ingredients",
+                items: [
+                    { name: "All-Purpose Flour (Maida)", quantity: "2", unit: "cups" },
+                    { name: "Yogurt (Dahi)", quantity: "1/2", unit: "cup" }
+                ]
+            }
         ],
-        recipeVideoLink: "https://www.youtube.com/watch?v=example",
-        recipeHeroImage: recipe1,
-        recipeHeroImage2: "",
+        nutrients: { calories: "550 kcal", protein: "15g", fat: "20g", carbs: "70g", fiber: "8g" },
+        preparationSteps: [
+            "Rinse the chickpeas and soak them overnight in water.",
+            "Knead a soft dough using flour, yogurt, and water for the bhature. Cover and let it rest."
+        ],
+        cookingSteps: [
+            {
+                name: "Cooking Chole",
+                steps: [
+                    "Pressure cook the soaked chickpeas until soft.",
+                    "In a pan, heat oil and sauté onions until golden brown. Add tomato puree and spices.",
+                    "Mix in the boiled chickpeas and simmer for 15 minutes, adjusting the consistency with water."
+                ]
+            },
+            {
+                name: "Cooking Bhature",
+                steps: [
+                    "Roll the dough into medium-sized circles.",
+                    "Deep fry the bhature in hot oil until they puff up and turn golden brown."
+                ]
+            }
+        ],
+        tools: ["Pressure Cooker", "Deep Frying Pan"],
+        servingSuggestions: "Serve hot with pickles, onion rings, and a side of mint chutney.",
+        variations: ["Use canned chickpeas for a quicker version."],
+        storage: { shelfLife: "2 days", reheatingInstructions: "Reheat chole on the stove and warm bhature in an oven." },
+        tags: ["Indian", "Lunch", "Traditional"],
+        difficulty: "Medium",
+        preparationTime: "8 hr",
+        cookingTime: "40 min",
         servings: 4,
-        prepTime: "10 min",
-        cookTime: "15 min",
-        category: "Breakfast",
-        nutrients: {
-            "Calories": "440",
-            "Protein": "8g",
-            "Carbs": "90g",
-            "Sodium": "600mg",
-            "Fat": "10g",
-        },
-        instructions: {
-            "Prepare Poha": "Rinse the poha gently in water 2-3 times and drain completely. Let it sit for 5 minutes to soften.",
-            "Cook Potatoes and Peanuts (Optional)": "Heat oil in a pan. Add diced potatoes and cook until golden brown. If using peanuts, add them and roast until crunchy. Remove and set aside.",
-            "Tempering": "In the same pan, add mustard seeds and cumin seeds. Once they start to splutter, add chopped green chilies, curry leaves, and onions. Sauté until the onions turn translucent.",
-            "Add Turmeric": "Add turmeric powder and mix well for about 30 seconds.",
-            "Mix Poha": "Gently add the soaked poha, cooked potatoes, peanuts, sugar, and salt. Stir everything gently to coat the poha with spices. Cook for 2-3 minutes on low heat.",
-            "Finish": "Turn off the heat and add lemon juice. Mix well and garnish with chopped coriander leaves, grated coconut, and sev if desired.",
-            "Serve": "Serve hot with a side of tea or chutney."
-        },
-        greeting: "Enjoy your flavorful and light poha!"
+        notes: "For extra flavor, garnish with fresh coriander and a squeeze of lemon."
     },
     {
         id: 2,
-        name: "Chole Bhature",
-        about: "Chole Bhature is a classic North Indian dish that brings together the rich flavors of spiced chickpeas (chole) served alongside fluffy, deep-fried bread (bhature). This hearty meal is perfect for lunch or dinner and is often accompanied by pickles and yogurt, making it a complete and satisfying experience for your taste buds.",
-        ingredients: [
-            "1 cup chickpeas",
-            "1 large onion, chopped",
-            "1 large tomato, chopped",
-            "1 tablespoon ginger-garlic paste",
-            "1 small green chili, chopped",
-            "1 teaspoon cumin seeds",
-            "1 teaspoon coriander powder",
-            "1 teaspoon cumin powder",
-            "1 teaspoon garam masala",
-            "2 tablespoons oil",
-            "Salt to taste",
-            "Water (as needed)",
-            "For Bhature:",
-            "2 cups all-purpose flour",
-            "1 teaspoon salt",
-            "2 tablespoons oil",
-            "Water (as needed)",
-            "Oil for deep frying"
+        name: "Poha",
+        about: "Poha is a quick and light Indian breakfast dish made with flattened rice, spices, and aromatic tempering. It is both healthy and satisfying, perfect for starting your day.",
+        image: recipe1,
+        cuisine: "Indian",
+        ingredientSections: [
+            {
+                name: "Poha Ingredients",
+                items: [
+                    { name: "Flattened Rice (Poha)", quantity: "1", unit: "cup" },
+                    { name: "Onion", quantity: "1", unit: "piece (chopped)" },
+                    { name: "Green Chilies", quantity: "2", unit: "pieces (sliced)" },
+                    { name: "Curry Leaves", quantity: "5-6", unit: "leaves" }
+                ]
+            }
         ],
-        recipeVideoLink: "https://www.youtube.com/watch?v=example",
-        recipeHeroImage: recipe2,
-        recipeHeroImage2: "",
-        servings: 4,
-        prepTime: "30 min",
-        cookTime: "45 min",
-        category: "Lunch",
-        nutrients: {
-            "Calories": "600",
-            "Protein": "18g",
-            "Carbs": "90g",
-            "Sodium": "800mg",
-            "Fat": "20g",
-        },
-        instructions: {
-            "Prepare Chickpeas": "Soak chickpeas overnight in water. Drain and rinse before cooking.",
-            "Cook Chole": "In a pressure cooker, heat oil. Add cumin seeds, chopped onions, and sauté until golden. Add ginger-garlic paste and green chili, cooking for another minute.",
-            "Add Tomatoes and Spices": "Stir in chopped tomatoes, coriander powder, cumin powder, garam masala, and salt. Cook until tomatoes are soft.",
-            "Pressure Cook": "Add the soaked chickpeas and enough water. Close the lid and pressure cook for about 15-20 minutes until soft.",
-            "Prepare Bhature Dough": "In a bowl, mix all-purpose flour, salt, and oil. Gradually add water to knead a soft dough. Cover and let it rest for at least 30 minutes.",
-            "Fry Bhature": "Divide the dough into small balls. Roll each ball into a circle about 6 inches in diameter. Heat oil in a deep pan and fry each bhature until puffed and golden.",
-            "Serve": "Serve hot chole with bhature, pickles, and yogurt."
-        },
-        greeting: "Enjoy your delicious Chole Bhature!"
+        nutrients: { calories: "200 kcal", protein: "4g", fat: "5g", carbs: "35g", fiber: "2g" },
+        preparationSteps: [
+            "Wash the poha thoroughly and drain the water completely.",
+            "Prepare the vegetables by chopping onions, green chilies, and coriander."
+        ],
+        cookingSteps: [
+            {
+                name: "Cooking Poha",
+                steps: [
+                    "Heat oil in a pan and add mustard seeds. Once they splutter, add curry leaves and green chilies.",
+                    "Add chopped onions and sauté until translucent.",
+                    "Mix in the drained poha, turmeric, and salt. Cook for 2-3 minutes, stirring gently.",
+                    "Turn off the heat and garnish with fresh coriander and a squeeze of lemon."
+                ]
+            }
+        ],
+        tools: ["Pan"],
+        servingSuggestions: "Serve hot with a sprinkle of sev or peanuts for added crunch.",
+        variations: ["Add boiled potatoes or peas for a more filling version."],
+        storage: { shelfLife: "1 day", reheatingInstructions: "Microwave for 30 seconds or steam briefly." },
+        tags: ["Indian", "Breakfast", "Quick"],
+        difficulty: "Easy",
+        preparationTime: "5 min",
+        cookingTime: "10 min",
+        servings: 2,
+        notes: "For added flavor, include a pinch of sugar and grated coconut."
     },
     {
         id: 3,
-        name: "Chow Mein",
-        about: "Chow Mein is a popular Chinese stir-fried noodle dish that combines a medley of colorful vegetables with tender meat or tofu. The noodles are tossed in a savory sauce that adds depth to the dish. It's quick to prepare, making it a favorite for busy weeknights, and can easily be customized with your favorite proteins and vegetables.",
-        ingredients: [
-            "200 grams chow mein noodles",
-            "1 cup mixed vegetables (carrots, bell peppers, beans)",
-            "100 grams chicken or tofu, sliced",
-            "2 tablespoons soy sauce",
-            "1 tablespoon oyster sauce (optional)",
-            "1 teaspoon sesame oil",
-            "2 cloves garlic, minced",
-            "1 tablespoon ginger, minced",
-            "2 tablespoons oil",
-            "Salt and pepper to taste",
-            "Green onions for garnish"
+        name: "Chowmein",
+        about: "Chowmein is a popular Indo-Chinese stir-fried noodle dish, loaded with vegetables and bold flavors. Perfect as a snack or a main course.",
+        image: recipe3,
+        cuisine: "Indo-Chinese",
+        ingredientSections: [
+            {
+                name: "Chowmein Ingredients",
+                items: [
+                    { name: "Noodles", quantity: "200", unit: "grams" },
+                    { name: "Cabbage", quantity: "1/2", unit: "cup (shredded)" },
+                    { name: "Carrot", quantity: "1", unit: "piece (julienned)" },
+                    { name: "Soy Sauce", quantity: "2", unit: "tablespoons" }
+                ]
+            }
         ],
-        recipeVideoLink: "https://www.youtube.com/watch?v=example",
-        recipeHeroImage: recipe3,
-        recipeHeroImage2: "",
-        servings: 4,
-        prepTime: "15 min",
-        cookTime: "20 min",
-        category: "Dinner",
-        nutrients: {
-            "Calories": "550",
-            "Protein": "20g",
-            "Carbs": "75g",
-            "Sodium": "900mg",
-            "Fat": "20g",
-        },
-        instructions: {
-            "Prepare Noodles": "Cook chow mein noodles according to package instructions. Drain and set aside.",
-            "Stir-fry Vegetables": "In a large pan, heat oil. Add minced garlic and ginger, sautéing until fragrant. Add mixed vegetables and stir-fry until tender.",
-            "Add Protein": "Add sliced chicken or tofu to the pan. Cook until chicken is no longer pink or tofu is golden.",
-            "Combine Noodles and Sauce": "Add cooked noodles, soy sauce, oyster sauce (if using), and sesame oil. Toss everything together until well combined.",
-            "Finish": "Season with salt and pepper to taste. Garnish with green onions before serving.",
-            "Serve": "Serve hot as a main dish."
-        },
-        greeting: "Enjoy your vibrant and flavorful Chow Mein!"
+        nutrients: { calories: "300 kcal", protein: "8g", fat: "10g", carbs: "40g", fiber: "3g" },
+        preparationSteps: [
+            "Boil the noodles as per package instructions and drain.",
+            "Chop and prepare the vegetables for stir-frying."
+        ],
+        cookingSteps: [
+            {
+                name: "Cooking Chowmein",
+                steps: [
+                    "Heat oil in a wok and sauté garlic until fragrant.",
+                    "Add vegetables and stir-fry on high heat for 2-3 minutes.",
+                    "Mix in the boiled noodles and soy sauce. Toss well to coat evenly.",
+                    "Cook for another minute and serve hot."
+                ]
+            }
+        ],
+        tools: ["Wok", "Tongs"],
+        servingSuggestions: "Serve with chili sauce or ketchup.",
+        variations: ["Add protein like chicken, shrimp, or tofu for a wholesome meal."],
+        storage: { shelfLife: "1 day", reheatingInstructions: "Stir-fry briefly to reheat." },
+        tags: ["Indo-Chinese", "Snacks", "Quick"],
+        difficulty: "Easy",
+        preparationTime: "10 min",
+        cookingTime: "15 min",
+        servings: 2,
+        notes: "Adjust the spice level by adding chili sauce or flakes."
     },
     {
         id: 4,
         name: "Vegetable Biryani",
-        about: "Vegetable Biryani is a fragrant and colorful rice dish that features a variety of mixed vegetables simmered with basmati rice and aromatic spices. This dish is not only visually appealing but also rich in flavors. It's a one-pot meal that's perfect for family gatherings or special occasions, often served with raita or salad.",
-        ingredients: [
-            "2 cups basmati rice",
-            "1 cup mixed vegetables (carrots, peas, beans, and potatoes)",
-            "1 large onion, thinly sliced",
-            "2 tomatoes, chopped",
-            "1 tablespoon ginger-garlic paste",
-            "1/2 cup yogurt",
-            "2 green chilies, slit",
-            "1 teaspoon cumin seeds",
-            "1 teaspoon coriander powder",
-            "1 teaspoon garam masala",
-            "1/4 teaspoon saffron strands (optional)",
-            "4 cups water",
-            "2 tablespoons oil or ghee",
-            "Salt to taste",
-            "Fresh cilantro and mint for garnish"
+        about: "Vegetable Biryani is a fragrant and flavorful one-pot rice dish cooked with aromatic spices and a medley of fresh vegetables. It's a hearty meal that captures the essence of Indian cuisine.",
+        image: recipe4,
+        cuisine: "Indian",
+        ingredientSections: [
+            {
+                name: "Biryani Ingredients",
+                items: [
+                    { name: "Basmati Rice", quantity: "1", unit: "cup" },
+                    { name: "Mixed Vegetables", quantity: "1", unit: "cup (chopped)" },
+                    { name: "Yogurt", quantity: "1/2", unit: "cup" },
+                    { name: "Biryani Masala", quantity: "2", unit: "teaspoons" }
+                ]
+            }
         ],
-        recipeVideoLink: "https://www.youtube.com/watch?v=example",
-        recipeHeroImage: recipe4,
-        recipeHeroImage2: "",
+        nutrients: { calories: "350 kcal", protein: "8g", fat: "10g", carbs: "55g", fiber: "5g" },
+        preparationSteps: [
+            "Rinse and soak the rice for 20 minutes.",
+            "Chop the vegetables and prepare the spice mix."
+        ],
+        cookingSteps: [
+            {
+                name: "Cooking Biryani",
+                steps: [
+                    "Cook the rice until 70% done and set aside.",
+                    "In a pan, sauté onions, ginger, and garlic until golden.",
+                    "Add vegetables, yogurt, and biryani masala. Cook until vegetables are tender.",
+                    "Layer the rice and vegetable mixture in a pot. Cover and cook on low heat for 10 minutes."
+                ]
+            }
+        ],
+        tools: ["Deep Pot", "Rice Cooker"],
+        servingSuggestions: "Serve with raita or salad.",
+        variations: ["Add paneer or tofu for extra protein."],
+        storage: { shelfLife: "2 days", reheatingInstructions: "Microwave or steam to reheat." },
+        tags: ["Indian", "Lunch", "Aromatic"],
+        difficulty: "Medium",
+        preparationTime: "20 min",
+        cookingTime: "40 min",
         servings: 4,
-        prepTime: "30 min",
-        cookTime: "1 hour",
-        category: "Dinner",
-        nutrients: {
-            "Calories": "450",
-            "Protein": "12g",
-            "Carbs": "90g",
-            "Sodium": "500mg",
-            "Fat": "10g",
-        },
-        instructions: {
-            "Prepare Rice": "Rinse basmati rice in water until it runs clear. Soak for 30 minutes, then drain.",
-            "Sauté Onions": "In a large pot, heat oil or ghee. Add sliced onions and sauté until golden brown.",
-            "Cook Vegetables": "Add ginger-garlic paste and sauté for a minute. Then add chopped tomatoes, mixed vegetables, and green chilies. Cook until vegetables are tender.",
-            "Add Spices and Rice": "Stir in coriander powder, garam masala, and salt. Add soaked rice and saffron strands (if using). Mix well.",
-            "Add Water": "Pour in 4 cups of water. Bring to a boil, then reduce heat, cover, and simmer for about 20 minutes until rice is cooked.",
-            "Garnish and Serve": "Once done, fluff the biryani with a fork. Garnish with fresh cilantro and mint. Serve with raita or salad."
-        },
-        greeting: "Enjoy your aromatic Vegetable Biryani!"
+        notes: "Garnish with fried onions and fresh mint for added flavor."
     },
     {
         id: 5,
         name: "Samosa",
-        about: "Samosa is a delightful Indian snack that features a crispy pastry shell filled with a savory mixture of spiced potatoes and peas. These triangle-shaped treats are deep-fried to golden perfection and are often served with chutneys. They're perfect as appetizers for parties or as a satisfying snack at any time of the day.",
-        ingredients: [
-            "2 cups all-purpose flour",
-            "4 medium potatoes, boiled and mashed",
-            "1 cup green peas, boiled",
-            "1 teaspoon cumin seeds",
-            "1 teaspoon garam masala",
-            "1/2 teaspoon red chili powder",
-            "1/2 teaspoon turmeric powder",
-            "2 tablespoons oil",
-            "Salt to taste",
-            "Water for kneading",
-            "Oil for deep frying"
+        about: "Samosa is a popular Indian snack made with a crispy, flaky pastry shell filled with a spiced potato mixture. It's perfect for tea-time or as an appetizer.",
+        image: recipe5,
+        cuisine: "Indian",
+        ingredientSections: [
+            {
+                name: "Samosa Ingredients",
+                items: [
+                    { name: "All-Purpose Flour (Maida)", quantity: "1", unit: "cup" },
+                    { name: "Potatoes", quantity: "3", unit: "pieces (boiled and mashed)" },
+                    { name: "Green Peas", quantity: "1/2", unit: "cup" },
+                    { name: "Garam Masala", quantity: "1", unit: "teaspoon" }
+                ]
+            }
         ],
-        recipeVideoLink: "https://www.youtube.com/watch?v=example",
-        recipeHeroImage: recipe5,
-        recipeHeroImage2: "",
+        nutrients: { calories: "250 kcal", protein: "4g", fat: "12g", carbs: "30g", fiber: "3g" },
+        preparationSteps: [
+            "Prepare the dough using flour, water, and a pinch of salt. Knead until smooth and let it rest.",
+            "Boil, peel, and mash the potatoes. Mix with peas and spices for the filling."
+        ],
+        cookingSteps: [
+            {
+                name: "Cooking Samosas",
+                steps: [
+                    "Roll out the dough and cut into circles. Fold into cones.",
+                    "Fill each cone with the potato mixture and seal the edges.",
+                    "Deep fry the samosas in hot oil until golden and crispy."
+                ]
+            }
+        ],
+        tools: ["Rolling Pin", "Deep Fryer"],
+        servingSuggestions: "Serve hot with tamarind or mint chutney.",
+        variations: ["Use minced meat for a non-vegetarian filling."],
+        storage: { shelfLife: "1 day", reheatingInstructions: "Reheat in an oven for 5 minutes." },
+        tags: ["Indian", "Snacks", "Crispy"],
+        difficulty: "Medium",
+        preparationTime: "30 min",
+        cookingTime: "20 min",
         servings: 4,
-        prepTime: "30 min",
-        cookTime: "30 min",
-        category: "Snack",
-        nutrients: {
-            "Calories": "250",
-            "Protein": "5g",
-            "Carbs": "35g",
-            "Sodium": "300mg",
-            "Fat": "10g",
-        },
-        instructions: {
-            "Prepare Dough": "In a bowl, mix all-purpose flour, salt, and 2 tablespoons of oil. Gradually add water to knead a firm dough. Cover and let it rest for 20 minutes.",
-            "Prepare Filling": "Heat oil in a pan. Add cumin seeds and let them splutter. Add boiled and mashed potatoes, green peas, garam masala, red chili powder, turmeric powder, and salt. Mix well and cook for 2-3 minutes. Allow the filling to cool.",
-            "Shape Samosas": "Divide the dough into small balls. Roll each ball into a thin oval. Cut the oval in half, form a cone, and fill it with the prepared potato mixture. Seal the edges with water.",
-            "Fry Samosas": "Heat oil in a deep pan. Fry the samosas on medium heat until golden brown and crispy.",
-            "Serve": "Serve hot with mint chutney or tamarind chutney."
-        },
-        greeting: "Enjoy your crispy and delicious Samosas!"
+        notes: "Ensure the oil is hot enough to avoid soggy samosas." 
     }
-]
+];
 
-export default allRecipies;
+export default recipes;

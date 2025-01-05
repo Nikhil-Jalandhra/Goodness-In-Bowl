@@ -1,83 +1,165 @@
 import "./RecipeSummary.css";
 import { Link } from "react-router-dom";
-import { RxLapTimer } from "react-icons/rx";
-import { IoPersonSharp } from "react-icons/io5";
-import { PiCookingPotFill } from "react-icons/pi";
+import { LiaCircle } from "react-icons/lia";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { useParams } from "react-router-dom";
-import allRecipies from "../database/recipes";
+import viewMore from "/Images/recipe1.jpg";
+import { useState } from "react";
+import recipes from "../database/recipes";
 
 
 function RecipeSummary() {
 
     const { id } = useParams();
-    const  recipeSummaryData = allRecipies.find(item => (item.id === Number(id)));
-
-    type RecipeInstructions = {
-      [key: string]: string | undefined;
-    };
+    const  recipeSummaryData = recipes.find(item => (item.id === Number(id)));
 
     type RecipeNutrients = {
       [key: string]: string | undefined;
     };
     
-    const typeInstructions: RecipeInstructions = recipeSummaryData?.instructions || {};
     const typeNutrients: RecipeNutrients = recipeSummaryData?.nutrients || {};
+
+    const [ingredientDone, setIngredientDone] = useState<Record<string, boolean>>({});
     
+    const ingredientToggle = (itemName: string) => {
+      setIngredientDone((prevState) => ({ ...prevState, [itemName]: !prevState[itemName] }));
+    };
 
   return (
     <div>
-      <div className="recipeSummaryContainer">
-        <div className="recipeSummaryContent">
-            <h1 className="recipeName">{recipeSummaryData?.name}</h1>
-         <div className="recipeSummaryImageAboutContainer">
-            <img src={recipeSummaryData?.recipeHeroImage} alt={recipeSummaryData?.name} />
-            <div className="recipeSummaryAboutContainer">
-            <h1 className="recipeAboutDetailHeading">About</h1>
-            <p>{recipeSummaryData?.about}</p>
-            <div className="recipeOfficialDetails">
-                <h1 className="recipeNutIng">Nutrients:</h1>
-                <ul>
-                    {recipeSummaryData?.nutrients && (
-                      Object.keys(recipeSummaryData?.nutrients).map((key)=> (
-                        <li><span>{key}</span>:{typeNutrients[key]}</li>
+      <div className="recipeSummaryContainer1">
+        <div className="recipeSummaryContent1">
+            <h1 className="recipeName1">{recipeSummaryData?.name}</h1>
 
-                      ))
-                    )}
-                </ul>
-            </div>
-            </div>
-            {/* ------------------------------------- */}
-            <div className="recipeOfficialDetails">
-            <h1 className="recipeAboutDetailHeading">Details</h1>
-                <h1 className="recipeNutIng">Ingredients:</h1>
-                <ul>
-                    {recipeSummaryData?.ingredients.map((item, index) => (
-                        <li key={index}>{item}</li>
-                    ))}
-                </ul>
-                <div className="recipeButtons">
-                    <p><IoPersonSharp />&nbsp;{recipeSummaryData?.servings} servings</p>
-                    <p><RxLapTimer />&nbsp;{recipeSummaryData?.prepTime} prep</p>
-                    <p><PiCookingPotFill />&nbsp;{recipeSummaryData?.cookTime} cook</p>
-                </div>
-            </div>
-            <img src={recipeSummaryData?.recipeHeroImage} alt={recipeSummaryData?.name} />
-         </div>
-         <div className="recipeInstructionsContainer">
-          <h1>Instructions :</h1>
-         {recipeSummaryData?.instructions && (
-           Object.keys(recipeSummaryData.instructions).map((key) => (
-             <div key={key} className="recipeInstructions">
-                <p><span>{key}:</span>&nbsp {typeInstructions[key]}</p>
+            <div className="recipeSummaryAbout1">
+              <div className="recipeSummaryHeroImg1">
+                <img src={recipeSummaryData?.image} alt="" />
               </div>
-            ))
-          )}
-          <h2>{recipeSummaryData?.greeting}</h2>
-         </div>
-          <iframe width="90%" height="500px" src="https://www.youtube.com/embed/XuttnylxuXY?si=XwsX31TDDp9IO1YG" title={recipeSummaryData?.name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-         <div className="recipeVideoAbout">
-            <p>Follow for more: <Link to="/">GOODNESS IN BOWL</Link></p>
-         </div>
+              <div className="recipeAboutP">
+                <p>{recipeSummaryData?.about}</p>
+              </div>
+            </div>
+
+            <div className="reicpeNutrients">
+                <div className="nutrientsHeading">
+                  <h2>Nutrients</h2>
+                </div>
+                {recipeSummaryData?.nutrients && (
+                  Object.keys(recipeSummaryData?.nutrients).map((key, index)=> (
+                    <div key={index} className="reicpeNutrientsDetails">
+                      <p>{typeNutrients[key]}</p>
+                      <h2>{key}</h2>
+                    </div>
+                  ))
+                )}
+            </div>
+
+                <div className="ingredinetsTable">
+                  {recipeSummaryData?.ingredientSections.map((item, index) => (
+                    <div key={index}>
+                      <h1>{item.name}</h1>
+                      <div>
+                        <div>{item.items.map((item, index) => (
+                            <div onClick={() => ingredientToggle(item.name)} 
+                            className={`ingredinetsTableRow ${ingredientDone[item.name] ? "ingredinetsTableRowDone" : ""}`} key={index} style={{display: "flex"}}>
+                                <p className="tableDot">{ingredientDone[item.name] ? <IoIosCheckmarkCircleOutline /> : <LiaCircle/>}</p>
+                                <h2>{item.name}, {item.quantity}, {item.unit}</h2>
+                            </div>
+                        ))}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div>
+                  <h1>Tools You Need</h1>
+                  {recipeSummaryData?.tools.map((item, index)=> (
+                    <p key={index}>{index+1}. {item}</p>
+                  ))}
+                </div>
+
+                <div>
+                  <h1>Prepration</h1>
+                {recipeSummaryData?.preparationSteps.map((item, index)=> (
+                  <p key={index}>{index+1}. {item}</p>
+                ))}
+                  
+                </div>
+
+                <div className="recipeInstructionsContainer1">
+                  {recipeSummaryData?.cookingSteps.map((item, index)=> (
+                    <div key={index}>
+                      <h1>{item.name}</h1>
+                      {item.steps.map((item,index)=> (
+                        <p key={index}>{index+1}. {item}</p>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+         
+                <h2>"{recipeSummaryData?.servingSuggestions}"</h2>
+                      
+                <iframe width="100%" height="500px" src="https://www.youtube.com/embed/XuttnylxuXY?si=XwsX31TDDp9IO1YG" title={recipeSummaryData?.name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
+                <h2>"{recipeSummaryData?.notes}"</h2>
+
+                <div className="recipeVideoAbout1">
+                    <p>Follow for more: <Link to="/">GOODNESS IN BOWL</Link></p>
+                </div>
+        </div>
+
+        <div className="recipeSummaryContent2">
+          <div className="viewMoreRecipes">
+            <h2 className="viewMoreHeading">View More</h2>
+            <div className="sepcificRecipe">
+              <div className="viewMoreRecipesImg">
+                <img src={viewMore} alt="recipe" />
+              </div>
+              <div className="specificRecipeAbout">
+                  <h2>Poha</h2>
+                  <p>4 servings</p>
+                  <p>30 min prep</p>
+                  <p>45 min cook</p>
+              </div>
+              <p></p>
+            </div>
+            <div className="sepcificRecipe">
+              <div className="viewMoreRecipesImg">
+                <img src={viewMore} alt="recipe" />
+              </div>
+              <div className="specificRecipeAbout">
+                  <h2>Poha</h2>
+                  <p>4 servings</p>
+                  <p>30 min prep</p>
+                  <p>45 min cook</p>
+              </div>
+              <p></p>
+            </div>
+            <div className="sepcificRecipe">
+              <div className="viewMoreRecipesImg">
+                <img src={viewMore} alt="recipe" />
+              </div>
+              <div className="specificRecipeAbout">
+                  <h2>Poha</h2>
+                  <p>4 servings</p>
+                  <p>30 min prep</p>
+                  <p>45 min cook</p>
+              </div>
+              <p></p>
+            </div>
+            <div className="sepcificRecipe">
+              <div className="viewMoreRecipesImg">
+                <img src={viewMore} alt="recipe" />
+              </div>
+              <div className="specificRecipeAbout">
+                  <h2>Poha</h2>
+                  <p>4 servings</p>
+                  <p>30 min prep</p>
+                  <p>45 min cook</p>
+              </div>
+              <p></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

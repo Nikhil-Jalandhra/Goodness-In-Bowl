@@ -5,38 +5,65 @@ import { PiCookingPotFill } from "react-icons/pi";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-interface recipeCardData {
+interface RecipeCardData {
   item: {
-      id: number,
-      name: string,
-      about: string,
-      ingredients: string[],
-      recipeVideoLink: string,
-      recipeHeroImage: string,
-      recipeHeroImage2: string,
-      servings: number,
-      prepTime: string,
-      cookTime: string,
-      category: string,
-      nutrients: object
-  }
+    id: number;
+    name: string;
+    about: string;
+    image: string;
+    cuisine: string;
+    ingredientSections: Array<{
+      name: string;
+      items: Array<{
+        name: string;
+        quantity: string;
+        unit: string;
+      }>;
+    }>;
+    nutrients: {
+      calories: string;
+      protein: string;
+      fat: string;
+      carbs: string;
+      fiber: string;
+    };
+    preparationSteps: string[];
+    cookingSteps: Array<{
+      name: string;
+      steps: string[];
+    }>;
+    tools: string[];
+    servingSuggestions: string;
+    variations: string[];
+    storage: {
+      shelfLife: string;
+      reheatingInstructions: string;
+    };
+    tags: string[];
+    difficulty: string;
+    preparationTime: string;
+    cookingTime: string;
+    servings: number;
+    notes: string;
+  };
 }
 
-function RecipeCard({item}: recipeCardData) {
+
+function RecipeCard({item}: RecipeCardData) {
     
   return (
     <div>
         <div className="recipeCard">
-          <Link to={`/recipes1/${item.id}/${item.name}`}>
+          <Link to={`/recipes/${item.id}/${item.name}`}>
             <div className="recipeImageContainer">
-                <div className="recipeCategory">{item.category}</div>
+                <div className="recipeCategory">{item.cuisine}</div>
                 <div className="recipePreview">View Recipe <MdOutlineArrowOutward /></div>
-                <img src={item.recipeHeroImage} alt={item.name} />
+                <img src={item.image} alt={item.name} />
             </div>
             <div className="recipeDetailContainer">
-                <div className="recipeDetail"><IoPersonSharp />&nbsp;{item.servings} servings</div>
-                <div className="recipeDetail"><RxLapTimer />&nbsp;{item.prepTime} prep</div>
-                <div className="recipeDetail"><PiCookingPotFill />&nbsp;{item.cookTime} cook</div>
+                <div className="recipeDetail"><IoPersonSharp />&nbsp;{item.servings} serv</div>
+                <div className="recipeDetail"><RxLapTimer />&nbsp;{item.preparationTime} prep</div>
+                <div className="recipeDetail"><PiCookingPotFill />&nbsp;{item.cookingTime} cook</div>
             </div>
             <h1>{item.name}</h1>
           </Link>

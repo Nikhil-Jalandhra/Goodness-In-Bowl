@@ -70,6 +70,14 @@
     animation-play-state: paused;   
 }
 
+.displayRecipeFilter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--baseColor);   
+}
+
 .homeBlogDisplay {
     width: 100%;
     color: var(--fontColor);
@@ -116,9 +124,9 @@
     /* width: 80%; */
     display: grid;
     margin: 50px 0;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    gap: 40px;
+    gap: 50px;
 }
 
 .homeImageGrid {
