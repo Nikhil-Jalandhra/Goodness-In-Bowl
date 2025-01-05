@@ -14,7 +14,7 @@ import allBlogs from "../database/blog";
 import AboutParagraph from "../Components/AboutParagraph";
 import BlogCard from "../Components/BlogCard";
 import RecipeCard from "../Components/RecipeCard";
-import allRecipies from "../database/recipes";
+import allRecipies from "../database/recipes.ts";
 import home1 from "/Images/home1.jpg";
 import home2 from "/Images/home2.jpg";
 import home3 from "/Images/home3.jpg";
