@@ -4,22 +4,26 @@ import "./FilterButton.css";
 interface buttonDetails {
   item: {
     name: string,
-    link: string
+    link: string,
+    image: string
   }
 }
 
 function FilterButton({item}: buttonDetails) {
 
-    const {name, link} =  item;
+    const {name, link, image} =  item;
 
   return (
     <div className="filterButtonWrap">
-      <Link to={link}>
-      <div className="filterButtonContainer">
-      <p>{name}</p>  
+  <Link to={link}>
+    <div className="filterButtonContainer">
+      <div className="filterButtonImage">
+        <img src={image} alt={name || "Filter Image"} />
+        <p>{name}</p>
       </div>
-    </Link>
     </div>
+  </Link>
+</div>
   );
 }
 

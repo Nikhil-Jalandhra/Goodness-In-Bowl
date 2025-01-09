@@ -24,6 +24,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { TfiYoutube } from "react-icons/tfi";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import FilterButton from "../Components/FilterButton";
+import filterData from "../database/filterData.ts";
 
 function Home() {
 
@@ -56,25 +57,6 @@ function Home() {
       return () => clearInterval(intervalId);
     }, [getRandomBowlImage]); // Now it's stable
 
-    const FilterButtonArray = [
-      {
-        name: "All",
-        link: "/recipes"
-      },
-      {
-        name: "Breakfast",
-        link: "/recipes/Breakfast"
-      },
-      {
-        name: "Lunch",
-        link: "/recipes/Lunch"
-      },
-      {
-        name: "Quick",
-        link: "/recipes/Qucik"
-      },
-    ]
-
   return (
     <div>
       <div className="homeContainer">
@@ -89,7 +71,7 @@ function Home() {
       </div>
 
       <div className="displayRecipeFilter">
-        {FilterButtonArray.map((item, index) => (
+        {filterData.map((item, index) => (
           <FilterButton key={index} item={item}/>
         ))}
       </div>
