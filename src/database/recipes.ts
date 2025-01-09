@@ -3,6 +3,8 @@ import recipe2 from "/Images/recipe2.jpg";
 import recipe3 from "/Images/recipe3.jpg";
 import recipe4 from "/Images/recipe4.jpg";
 import recipe5 from "/Images/recipe5.jpg";
+import recipe6 from "/Images/recipe6.jpg";
+import recipe7 from "/Images/recipe7.jpg";
 
 const recipes = [
     {
@@ -236,7 +238,109 @@ const recipes = [
         cookingTime: "20 min",
         servings: 4,
         notes: "Ensure the oil is hot enough to avoid soggy samosas." 
+    },
+    {
+        id: 6,
+        name: "Paneer Butter Masala",
+        about: "Paneer Butter Masala is a creamy and rich Indian curry made with paneer (Indian cottage cheese) cooked in a flavorful tomato-based gravy. It’s a crowd favorite and perfect for dinner.",
+        image: recipe6,
+        cuisine: "Indian",
+        ingredientSections: [
+            {
+                name: "Paneer Butter Masala Ingredients",
+                items: [
+                    { name: "Paneer (Cottage Cheese)", quantity: "200", unit: "grams (cubed)" },
+                    { name: "Tomatoes", quantity: "4", unit: "medium (pureed)" },
+                    { name: "Onion", quantity: "1", unit: "medium (finely chopped)" },
+                    { name: "Butter", quantity: "2", unit: "tablespoons" },
+                    { name: "Heavy Cream", quantity: "1/4", unit: "cup" },
+                    { name: "Ginger-Garlic Paste", quantity: "1", unit: "teaspoon" },
+                    { name: "Garam Masala", quantity: "1", unit: "teaspoon" },
+                    { name: "Red Chili Powder", quantity: "1", unit: "teaspoon" },
+                    { name: "Coriander Powder", quantity: "1", unit: "teaspoon" },
+                    { name: "Kasuri Methi (Dried Fenugreek Leaves)", quantity: "1", unit: "teaspoon" },
+                    { name: "Salt", quantity: "to taste", unit: "" }
+                ]
+            }
+        ],
+        nutrients: { calories: "320 kcal", protein: "12g", fat: "25g", carbs: "10g", fiber: "2g" },
+        preparationSteps: [
+            "Cut the paneer into cubes and soak in warm water to keep it soft.",
+            "Prepare the tomato puree by blending fresh tomatoes.",
+            "Chop the onion finely and gather all the spices."
+        ],
+        cookingSteps: [
+            {
+                name: "Cooking Paneer Butter Masala",
+                steps: [
+                    "Heat butter in a pan and sauté the onions until golden.",
+                    "Add ginger-garlic paste and cook until the raw smell disappears.",
+                    "Pour in the tomato puree, red chili powder, coriander powder, and salt. Cook until the oil separates.",
+                    "Add cream, garam masala, and kasuri methi. Stir well to combine.",
+                    "Add the paneer cubes and cook for 5-7 minutes on low heat."
+                ]
+            }
+        ],
+        tools: ["Blender", "Pan", "Knife"],
+        servingSuggestions: "Serve hot with naan, roti, or steamed rice.",
+        variations: ["Add boiled vegetables like peas or carrots for a mixed vegetable curry."],
+        storage: { shelfLife: "2 days (refrigerated)", reheatingInstructions: "Reheat on a stove or in a microwave." },
+        tags: ["Dinner", "Vegetarian", "Curry"],
+        difficulty: "Medium",
+        preparationTime: "20 min",
+        cookingTime: "30 min",
+        servings: 4,
+        notes: "Use fresh cream for the best flavor and garnish with fresh cilantro before serving."
+    },{
+        id: 7,
+        name: "Gulab Jamun",
+        about: "Gulab Jamun is a classic Indian dessert made with soft milk-based dumplings soaked in a fragrant sugar syrup. It’s a must-have for festive occasions or as a sweet ending to a meal.",
+        image: recipe7,
+        cuisine: "Indian",
+        ingredientSections: [
+            {
+                name: "Gulab Jamun Ingredients",
+                items: [
+                    { name: "Khoya (Mawa)", quantity: "1", unit: "cup (grated)" },
+                    { name: "All-Purpose Flour (Maida)", quantity: "2", unit: "tablespoons" },
+                    { name: "Baking Powder", quantity: "1/4", unit: "teaspoon" },
+                    { name: "Milk", quantity: "2-3", unit: "tablespoons (as needed)" },
+                    { name: "Sugar", quantity: "1.5", unit: "cups" },
+                    { name: "Water", quantity: "1.5", unit: "cups" },
+                    { name: "Cardamom Pods", quantity: "3", unit: "crushed" },
+                    { name: "Rose Water", quantity: "1", unit: "teaspoon" },
+                    { name: "Ghee or Oil", quantity: "for deep frying", unit: "" }
+                ]
+            }
+        ],
+        nutrients: { calories: "300 kcal", protein: "6g", fat: "10g", carbs: "45g", fiber: "1g" },
+        preparationSteps: [
+            "Grate the khoya and mix it with flour and baking powder to form a soft dough.",
+            "Roll the dough into small, smooth balls ensuring there are no cracks."
+        ],
+        cookingSteps: [
+            {
+                name: "Cooking Gulab Jamun",
+                steps: [
+                    "Heat sugar and water in a pan to prepare the sugar syrup. Add crushed cardamom and rose water, then simmer for 5 minutes.",
+                    "Heat ghee or oil in a deep pan. Fry the balls on low heat until golden brown.",
+                    "Soak the fried balls in warm sugar syrup for at least 30 minutes."
+                ]
+            }
+        ],
+        tools: ["Mixing Bowl", "Deep Pan", "Slotted Spoon"],
+        servingSuggestions: "Serve warm or at room temperature, garnished with chopped pistachios or almonds.",
+        variations: ["Add saffron strands to the syrup for an enhanced aroma."],
+        storage: { shelfLife: "3 days (refrigerated)", reheatingInstructions: "Warm gently in the syrup before serving." },
+        tags: ["Indian", "Dessert", "Sweet"],
+        difficulty: "Easy",
+        preparationTime: "15 min",
+        cookingTime: "30 min",
+        servings: 6,
+        notes: "Ensure the oil is not too hot to avoid burning the gulab jamuns."
     }
+    
+    
 ];
 
 export default recipes;

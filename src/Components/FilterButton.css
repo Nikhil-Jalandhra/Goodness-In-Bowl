@@ -4,19 +4,87 @@
 }
 
 .filterButtonContainer {
+    width: 180px;
+    height: 180px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: var(--baseColor);
     border: 1px solid var(--fontColor);
     border-radius: 5px;
-    padding: 15px 20px;
     margin: 0 8px;
-    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
 }
 
-.filterButtonContainer:hover {
-    background-color: #ddbd3f;
-    /* font-size: 15px; */
+.filterButtonImage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.filterButtonImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    filter: blur(2px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.filterButtonImage p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-weight: 900;
+    color: var(--fontColor);
+    text-align: center;
+    z-index: 2;
+    font-size: 21px;
+}
+
+.filterButtonImage::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.164);
+    z-index: 1;
+}
+
+.filterButtonContainer:hover .filterButtonImage img {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.filterButtonContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    transition: background-color 0.5s ease;
+}
+
+@media (max-width: 600px) {
+    .filterButtonContainer {
+        width: 120px;
+        height: 150px;
+    }
+    .filterButtonImage p {
+        font-size: 16px;
+    }
 }
