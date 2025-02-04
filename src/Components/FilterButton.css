@@ -47,7 +47,8 @@
     color: var(--fontColor);
     text-align: center;
     z-index: 2;
-    font-size: 21px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    font-size: 22px;
 }
 
 .filterButtonImage::after {
@@ -65,6 +66,10 @@
     transform: scale(1.1);
     opacity: 1;
     filter: blur(0px);
+}
+
+.filterButtonContainer:hover .filterButtonImage p {
+    opacity: 0;
 }
 
 .filterButtonContainer::before {
